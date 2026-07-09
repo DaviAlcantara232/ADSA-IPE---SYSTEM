@@ -1,0 +1,460 @@
+/* ==========================================
+   ADSA IPÊ - RESPONSIVE DESIGN
+   Adaptação para todos os dispositivos
+========================================== */
+
+
+
+/* ==========================================
+   DESKTOP GRANDE
+   Acima de 1200px
+========================================== */
+
+@media (min-width: 1200px) {
+
+
+    .container {
+
+        max-width: 1200px;
+        margin: 0 auto;
+
+    }
+
+
+
+    .hero {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+
+
+    .hero-content {
+
+        max-width: 550px;
+
+    }
+
+
+
+}
+
+
+
+
+
+
+/* ==========================================
+   LAPTOPS E TELAS MÉDIAS
+   Até 1200px
+========================================== */
+
+@media (max-width: 1200px) {
+
+
+    .navbar {
+
+        padding: 20px;
+
+    }
+
+
+
+    .logo img {
+
+        width: 180px;
+
+    }
+
+
+
+    .nav-links {
+
+        gap: 20px;
+
+    }
+
+
+
+    .hero {
+
+        padding: 50px 30px;
+
+    }
+
+
+
+    .hero h1 {
+
+        font-size: 42px;
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   TABLETS
+   Até 1024px
+========================================== */
+
+@media (max-width: 1024px) {
+
+
+
+    .nav-links {
+
+        gap: 15px;
+
+    }
+
+
+
+    .nav-links a {
+
+        font-size: 14px;
+
+    }
+
+
+
+    .hero {
+
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 40px;
+
+
+    }
+
+
+
+    .hero-image img {
+
+        max-width: 500px;
+
+        width: 100%;
+
+    }
+
+
+
+    .grid-4 {
+
+
+        grid-template-columns: repeat(2, 1fr);
+
+
+    }
+
+
+
+    .about-grid {
+
+
+        grid-template-columns: 1fr;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   CELULAR E TABLET PEQUENO
+   Até 768px
+========================================== */
+
+@media (max-width: 768px) {
+
+
+
+    /* HEADER */
+
+
+    .navbar {
+
+        justify-content: space-between;
+
+        padding: 15px 20px;
+
+    }
+
+
+
+    .logo img {
+
+        width: 150px;
+
+    }
+
+
+
+    .menu-toggle {
+
+        display: flex;
+
+    }
+
+
+
+    .nav-links {
+
+
+        position: absolute;
+
+        top: 75px;
+
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 30px 0;
+
+
+        transform: translateY(-120%);
+
+        transition: .3s ease;
+
+
+    }
+
+
+
+    .nav-links.active {
+
+
+        transform: translateY(0);
+
+
+    }
+
+
+
+
+
+
+    /* HERO */
+
+
+    .hero {
+
+        padding: 40px 20px;
+
+    }
+
+
+
+    .hero h1 {
+
+        font-size: 32px;
+
+    }
+
+
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+
+
+    .hero-buttons {
+
+
+        flex-direction: column;
+
+        width: 100%;
+
+
+    }
+
+
+
+    .hero-buttons .btn {
+
+
+        width: 100%;
+
+
+    }
+
+
+
+
+
+
+    /* CARDS */
+
+
+    .grid-4,
+
+    .grid-3 {
+
+
+        grid-template-columns: 1fr;
+
+
+    }
+
+
+
+
+
+
+    /* SEÇÕES */
+
+
+    .section {
+
+
+        padding: 50px 20px;
+
+
+    }
+
+
+
+    .section-title h2 {
+
+
+        font-size: 28px;
+
+
+    }
+
+
+
+
+
+
+    /* FOOTER */
+
+
+    footer {
+
+
+        text-align: center;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   CELULARES PEQUENOS
+   Até 480px
+========================================== */
+
+@media (max-width: 480px) {
+
+
+
+    .logo img {
+
+
+        width: 125px;
+
+
+    }
+
+
+
+
+    .hero h1 {
+
+
+        font-size: 26px;
+
+
+    }
+
+
+
+
+    .btn {
+
+
+        padding: 12px 18px;
+
+
+        font-size: 14px;
+
+
+    }
+
+
+
+    .card {
+
+
+        padding: 18px;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   ORIENTAÇÃO HORIZONTAL CELULAR
+========================================== */
+
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+
+    .hero {
+
+
+        padding-top: 20px;
+
+        padding-bottom: 20px;
+
+
+    }
+
+
+
+}
