@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta 
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+
+<title>
+Configurações | ADSA IPÊ
+</title>
+
+
+<link rel="stylesheet" href="../css/configuracoes.css">
+
+
+</head>
+
+
+<body>
+
+
+
+<div class="layout">
+
+
+
+<!-- ==========================
+SIDEBAR
+========================== -->
+
+
+<aside class="sidebar">
+
+
+
+<div class="logo">
+
+
+<h1>
+
+ADSA IPÊ
+
+</h1>
+
+
+<p>
+
+Painel Administrativo
+
+</p>
+
+
+</div>
+
+
+
+
+
+<nav class="menu">
+
+
+
+<a href="../dashboard.html">
+
+🏠 Dashboard
+
+</a>
+
+
+
+<a href="financeiro.html">
+
+💰 Financeiro
+
+</a>
+
+
+
+<a href="usuarios.html">
+
+👥 Usuários
+
+</a>
+
+
+
+<a href="membros.html">
+
+📖 Membros
+
+</a>
+
+
+
+<a href="eventos.html">
+
+📅 Eventos
+
+</a>
+
+
+
+<a href="avisos.html">
+
+📢 Avisos
+
+</a>
+
+
+
+<a class="active" href="configuracoes.html">
+
+⚙️ Configurações
+
+</a>
+
+
+
+</nav>
+
+
+
+
+
+<button
+
+class="btnLogout"
+
+onclick="logout()">
+
+🚪 Sair
+
+</button>
+
+
+
+</aside>
+
+
+
+
+
+
+
+<!-- ==========================
+CONTEÚDO
+========================== -->
+
+
+<main class="content">
+
+
+
+<header class="topbar">
+
+
+
+<div>
+
+
+<h2>
+
+Configurações
+
+</h2>
+
+
+
+<p>
+
+Gerencie as configurações do sistema.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+<div class="avatar">
+
+A
+
+</div>
+
+
+
+</header>
+
+<!-- ==========================
+   PERFIL ADMINISTRADOR
+========================== -->
+
+
+<section class="configCard">
+
+
+<div class="tituloConfig">
+
+
+<h2>
+
+👤 Perfil do Administrador
+
+</h2>
+
+
+<p>
+
+Atualize suas informações de acesso.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="grid">
+
+
+
+<div class="campo">
+
+
+<label>
+
+Nome
+
+</label>
+
+
+<input
+
+type="text"
+
+id="nomeAdmin"
+
+placeholder="Nome do administrador">
+
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+E-mail
+
+</label>
+
+
+<input
+
+type="email"
+
+id="emailAdmin"
+
+placeholder="E-mail de acesso">
+
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Telefone
+
+</label>
+
+
+<input
+
+type="tel"
+
+id="telefoneAdmin"
+
+placeholder="Telefone">
+
+
+</div>
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Cargo
+
+</label>
+
+
+<input
+
+type="text"
+
+id="cargoAdmin"
+
+disabled>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+   DADOS DA IGREJA
+========================== -->
+
+
+<section class="configCard">
+
+
+<div class="tituloConfig">
+
+
+<h2>
+
+⛪ Dados da Igreja
+
+</h2>
+
+
+<p>
+
+Informações públicas da ADSA IPÊ.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="grid">
+
+
+
+<div class="campo">
+
+
+<label>
+
+Nome da Igreja
+
+</label>
+
+
+<input
+
+type="text"
+
+id="nomeIgreja"
+
+value="ADSA IPÊ">
+
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Pastor Responsável
+
+</label>
+
+
+<input
+
+type="text"
+
+id="pastorResponsavel"
+
+placeholder="Nome do pastor">
+
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Telefone da Igreja
+
+</label>
+
+
+<input
+
+type="tel"
+
+id="telefoneIgreja"
+
+placeholder="Telefone">
+
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+E-mail da Igreja
+
+</label>
+
+
+<input
+
+type="email"
+
+id="emailIgreja"
+
+placeholder="E-mail">
+
+
+</div>
+
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Endereço
+
+</label>
+
+
+<input
+
+type="text"
+
+id="enderecoIgreja"
+
+placeholder="Endereço da igreja">
+
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Cidade
+
+</label>
+
+
+<input
+
+type="text"
+
+id="cidadeIgreja"
+
+placeholder="Cidade">
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+<!-- ==========================
+   SEGURANÇA
+========================== -->
+
+
+<section class="configCard">
+
+
+<div class="tituloConfig">
+
+
+<h2>
+
+🔐 Segurança
+
+</h2>
+
+
+<p>
+
+Gerencie a segurança da conta.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="grid">
+
+
+
+<div class="campo">
+
+
+<label>
+
+Senha Atual
+
+</label>
+
+
+<input
+
+type="password"
+
+id="senhaAtual"
+
+placeholder="Digite a senha atual">
+
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Nova Senha
+
+</label>
+
+
+<input
+
+type="password"
+
+id="novaSenha"
+
+placeholder="Digite a nova senha">
+
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Confirmar Nova Senha
+
+</label>
+
+
+<input
+
+type="password"
+
+id="confirmarSenha"
+
+placeholder="Confirme a nova senha">
+
+
+</div>
+
+
+</div>
+
+
+
+<button
+
+class="btnSalvar"
+
+onclick="alterarSenha()">
+
+🔒 Alterar Senha
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ==========================
+   NOTIFICAÇÕES
+========================== -->
+
+
+<section class="configCard">
+
+
+<div class="tituloConfig">
+
+
+<h2>
+
+🔔 Notificações
+
+</h2>
+
+
+<p>
+
+Escolha quais alertas deseja receber.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="opcoes">
+
+
+
+<label class="switchItem">
+
+
+<input
+
+type="checkbox"
+
+id="notificacaoMembros"
+
+checked>
+
+
+<span>
+
+Novos membros cadastrados
+
+</span>
+
+
+</label>
+
+
+
+
+
+<label class="switchItem">
+
+
+<input
+
+type="checkbox"
+
+id="notificacaoFinanceiro"
+
+checked>
+
+
+<span>
+
+Movimentações financeiras
+
+</span>
+
+
+</label>
+
+
+
+
+
+<label class="switchItem">
+
+
+<input
+
+type="checkbox"
+
+id="notificacaoEventos">
+
+
+<span>
+
+Novos eventos
+
+</span>
+
+
+</label>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ==========================
+   APARÊNCIA
+========================== -->
+
+
+<section class="configCard">
+
+
+<div class="tituloConfig">
+
+
+<h2>
+
+🎨 Aparência
+
+</h2>
+
+
+<p>
+
+Personalize o painel administrativo.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Tema
+
+</label>
+
+
+<select id="tema">
+
+
+<option value="claro">
+
+☀️ Claro
+
+</option>
+
+
+
+<option value="escuro">
+
+🌙 Escuro
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+</section>
+
+<!-- ==========================
+   BACKUP
+========================== -->
+
+
+<section class="configCard">
+
+
+<div class="tituloConfig">
+
+
+<h2>
+
+💾 Backup do Sistema
+
+</h2>
+
+
+<p>
+
+Exporte ou restaure os dados do painel.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="acoesBackup">
+
+
+<button
+
+class="btnSalvar"
+
+onclick="exportarBackup()">
+
+📥 Exportar Backup
+
+</button>
+
+
+
+
+
+<button
+
+class="btnCancelar"
+
+onclick="restaurarBackup()">
+
+📤 Restaurar Backup
+
+</button>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+   AÇÕES GERAIS
+========================== -->
+
+
+<section class="acoesConfiguracao">
+
+
+<button
+
+class="btnSalvar"
+
+onclick="salvarConfiguracoes()">
+
+💾 Salvar Configurações
+
+</button>
+
+
+<button
+
+class="btnCancelar"
+
+onclick="resetarConfiguracoes()">
+
+🔄 Restaurar Padrões
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- JAVASCRIPT -->
+
+
+<script src="../js/configuracoes.js"></script>
+
+
+
+
+</body>
+
+
+</html>

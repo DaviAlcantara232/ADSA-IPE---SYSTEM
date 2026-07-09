@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+
+<meta 
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+
+<title>
+Eventos | ADSA IPÊ
+</title>
+
+
+
+<link rel="stylesheet" href="../css/eventos.css">
+
+
+</head>
+
+
+
+<body>
+
+
+<div class="layout">
+
+
+
+
+
+<!-- ==========================
+SIDEBAR
+========================== -->
+
+
+<aside class="sidebar">
+
+
+
+<div class="logo">
+
+
+<h1>
+ADSA IPÊ
+</h1>
+
+
+<p>
+Painel Administrativo
+</p>
+
+
+</div>
+
+
+
+
+
+<nav class="menu">
+
+
+
+<a href="../dashboard.html">
+
+🏠 Dashboard
+
+</a>
+
+
+
+
+<a href="financeiro.html">
+
+💰 Financeiro
+
+</a>
+
+
+
+
+<a href="usuarios.html">
+
+👥 Usuários
+
+</a>
+
+
+
+
+<a href="membros.html">
+
+📖 Membros
+
+</a>
+
+
+
+
+<a class="active" href="eventos.html">
+
+📅 Eventos
+
+</a>
+
+
+
+
+<a href="avisos.html">
+
+📢 Avisos
+
+</a>
+
+
+
+
+<a href="configuracoes.html">
+
+⚙️ Configurações
+
+</a>
+
+
+
+
+</nav>
+
+
+
+
+
+
+
+<button
+
+class="btnLogout"
+
+onclick="logout()">
+
+🚪 Sair
+
+</button>
+
+
+
+
+
+</aside>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+CONTEÚDO
+========================== -->
+
+
+<main class="content">
+
+
+
+
+
+<header class="topbar">
+
+
+<div>
+
+
+<h2>
+
+Gerenciamento de Eventos
+
+</h2>
+
+
+<p>
+
+Crie e organize os eventos da igreja.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="avatar">
+
+A
+
+</div>
+
+
+
+
+</header>
+
+<!-- ==========================
+   CARDS DE EVENTOS
+========================== -->
+
+
+<section class="cards">
+
+
+
+<div class="card">
+
+
+<h3>
+
+📅 Total de Eventos
+
+</h3>
+
+
+<strong id="totalEventos">
+
+0
+
+</strong>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+⏳ Próximos Eventos
+
+</h3>
+
+
+<strong id="proximosEventos">
+
+0
+
+</strong>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+⛪ Cultos
+
+</h3>
+
+
+<strong id="totalCultos">
+
+0
+
+</strong>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+🎉 Outros
+
+</h3>
+
+
+<strong id="totalOutros">
+
+0
+
+</strong>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+   FORMULÁRIO DE EVENTOS
+========================== -->
+
+
+<section class="formulario">
+
+
+
+<div class="tituloFormulario">
+
+
+<h2>
+
+➕ Criar Evento
+
+</h2>
+
+
+<p>
+
+Adicione um novo evento da igreja.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="grid">
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Nome do Evento
+
+</label>
+
+
+<input
+
+type="text"
+
+id="nomeEvento"
+
+placeholder="Ex: Culto de Celebração">
+
+</div>
+
+
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Categoria
+
+</label>
+
+
+<select id="categoriaEvento">
+
+
+<option value="">
+
+Selecione
+
+</option>
+
+
+<option value="Culto">
+
+⛪ Culto
+
+</option>
+
+
+
+<option value="Reunião">
+
+👥 Reunião
+
+</option>
+
+
+
+<option value="Ensaio">
+
+🎵 Ensaio
+
+</option>
+
+
+
+<option value="Conferência">
+
+🔥 Conferência
+
+</option>
+
+
+
+<option value="Outro">
+
+🎉 Outro
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Data
+
+</label>
+
+
+<input
+
+type="date"
+
+id="dataEvento">
+
+
+</div>
+
+
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Horário
+
+</label>
+
+
+<input
+
+type="time"
+
+id="horarioEvento">
+
+
+</div>
+
+
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Local
+
+</label>
+
+
+<input
+
+type="text"
+
+id="localEvento"
+
+placeholder="Ex: Templo principal">
+
+
+</div>
+
+
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Responsável
+
+</label>
+
+
+<input
+
+type="text"
+
+id="responsavelEvento"
+
+placeholder="Nome do responsável">
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+<!-- ==========================
+   DESCRIÇÃO
+========================== -->
+
+
+<div class="campo descricao">
+
+
+<label>
+
+Descrição do Evento
+
+</label>
+
+
+
+<textarea
+
+id="descricaoEvento"
+
+rows="5"
+
+placeholder="Digite informações sobre o evento...">
+
+</textarea>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ==========================
+   BOTÕES
+========================== -->
+
+
+<div class="acoesFormulario">
+
+
+<button
+
+class="btnSalvar"
+
+onclick="salvarEvento()">
+
+💾 Salvar Evento
+
+</button>
+
+
+
+
+
+<button
+
+class="btnCancelar"
+
+onclick="cancelarEvento()">
+
+❌ Cancelar
+
+</button>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+   PESQUISA
+========================== -->
+
+
+<section class="pesquisa">
+
+
+<input
+
+type="text"
+
+id="pesquisarEvento"
+
+oninput="pesquisarEvento()"
+
+placeholder="🔍 Pesquisar evento...">
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ==========================
+   LISTA DE EVENTOS
+========================== -->
+
+
+<section class="listaEventos">
+
+
+
+<div class="cabecalhoLista">
+
+
+<div>
+
+
+<h2>
+
+📅 Eventos Cadastrados
+
+</h2>
+
+
+<p>
+
+Gerencie os eventos da ADSA IPÊ.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="filtros">
+
+
+
+<select id="filtroCategoria">
+
+
+<option value="todos">
+
+Todas categorias
+
+</option>
+
+
+
+<option value="Culto">
+
+⛪ Cultos
+
+</option>
+
+
+
+<option value="Reunião">
+
+👥 Reuniões
+
+</option>
+
+
+
+<option value="Ensaio">
+
+🎵 Ensaios
+
+</option>
+
+
+
+<option value="Conferência">
+
+🔥 Conferências
+
+</option>
+
+
+
+<option value="Outro">
+
+🎉 Outros
+
+</option>
+
+
+</select>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="tabelaContainer">
+
+
+
+<table>
+
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+
+Evento
+
+</th>
+
+
+<th>
+
+Data
+
+</th>
+
+
+<th>
+
+Horário
+
+</th>
+
+
+<th>
+
+Categoria
+
+</th>
+
+
+<th>
+
+Local
+
+</th>
+
+
+<th>
+
+Responsável
+
+</th>
+
+
+<th>
+
+Ações
+
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+<tbody id="listaEventos">
+
+
+<tr>
+
+
+<td colspan="7">
+
+Nenhum evento cadastrado.
+
+</td>
+
+
+</tr>
+
+
+</tbody>
+
+
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</section>
+
+</main>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ==========================
+   JAVASCRIPT
+========================== -->
+
+
+<script src="../js/eventos.js"></script>
+
+
+
+
+</body>
+
+
+</html>

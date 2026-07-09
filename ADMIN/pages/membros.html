@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Membros | ADSA IPÊ
+</title>
+
+
+<link rel="stylesheet" href="../css/membros.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="layout">
+
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+<h1>
+ADSA IPÊ
+</h1>
+
+<p>
+Painel Administrativo
+</p>
+
+</div>
+
+
+
+
+<nav class="menu">
+
+
+<a href="../dashboard.html">
+
+🏠 Dashboard
+
+</a>
+
+
+<a href="financeiro.html">
+
+💰 Financeiro
+
+</a>
+
+
+<a href="usuarios.html">
+
+👥 Usuários
+
+</a>
+
+
+<a class="active" href="membros.html">
+
+📖 Membros
+
+</a>
+
+
+<a href="eventos.html">
+
+📅 Eventos
+
+</a>
+
+
+<a href="avisos.html">
+
+📢 Avisos
+
+</a>
+
+
+<a href="configuracoes.html">
+
+⚙️ Configurações
+
+</a>
+
+
+</nav>
+
+
+
+<button 
+class="btnLogout"
+onclick="logout()">
+
+🚪 Sair
+
+</button>
+
+
+</aside>
+
+
+
+
+
+<!-- CONTEÚDO -->
+
+<main class="content">
+
+
+<header class="topbar">
+
+
+<div>
+
+<h2>
+
+Cadastro de Membros
+
+</h2>
+
+
+<p>
+
+Gerencie as informações dos membros da igreja.
+
+</p>
+
+
+</div>
+
+
+
+<div class="avatar">
+
+A
+
+</div>
+
+
+
+</header>
+
+<!-- ==========================
+CARDS DE MEMBROS
+========================== -->
+
+<section class="cards">
+
+
+<div class="card">
+
+<h3>
+📖 Total de Membros
+</h3>
+
+<strong id="totalMembros">
+0
+</strong>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+💧 Batizados
+</h3>
+
+<strong id="totalBatizados">
+0
+</strong>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+🙏 Ministérios
+</h3>
+
+<strong id="totalMinisterios">
+0
+</strong>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+🟢 Ativos
+</h3>
+
+<strong id="totalAtivos">
+0
+</strong>
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+FORMULÁRIO DE MEMBROS
+========================== -->
+
+<section class="formulario">
+
+
+<div class="tituloFormulario">
+
+
+<h2>
+
+➕ Cadastrar Membro
+
+</h2>
+
+
+<p>
+
+Adicione as informações do membro da igreja.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="grid">
+
+
+
+
+
+<div class="campo">
+
+<label>
+
+Nome Completo
+
+</label>
+
+
+<input
+
+type="text"
+
+id="nomeMembro"
+
+placeholder="Digite o nome completo">
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+<label>
+
+Data de Nascimento
+
+</label>
+
+
+<input
+
+type="date"
+
+id="dataNascimento">
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+<label>
+
+Telefone
+
+</label>
+
+
+<input
+
+type="tel"
+
+id="telefoneMembro"
+
+placeholder="(11) 99999-9999">
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+<label>
+
+E-mail
+
+</label>
+
+
+<input
+
+type="email"
+
+id="emailMembro"
+
+placeholder="Digite o e-mail">
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+<label>
+
+Estado Civil
+
+</label>
+
+
+<select id="estadoCivil">
+
+
+<option value="">
+
+Selecione
+
+</option>
+
+
+<option value="Solteiro">
+
+Solteiro
+
+</option>
+
+
+<option value="Casado">
+
+Casado
+
+</option>
+
+
+<option value="Viúvo">
+
+Viúvo
+
+</option>
+
+
+<option value="Divorciado">
+
+Divorciado
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+<label>
+
+Data de Entrada na Igreja
+
+</label>
+
+
+<input
+
+type="date"
+
+id="dataEntrada">
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+<label>
+
+Batizado?
+
+</label>
+
+
+<select id="batizado">
+
+
+<option value="Sim">
+
+💧 Sim
+
+</option>
+
+
+<option value="Não">
+
+❌ Não
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+<label>
+
+Ministério
+
+</label>
+
+
+<select id="ministerio">
+
+
+<option value="">
+
+Selecione
+
+</option>
+
+
+<option value="Mídia">
+
+📺 Mídia
+
+</option>
+
+
+<option value="Louvor">
+
+🎵 Louvor
+
+</option>
+
+
+<option value="Obreiro">
+
+🙏 Obreiro
+
+</option>
+
+
+<option value="Diaconato">
+
+⛪ Diaconato
+
+</option>
+
+
+<option value="Infantil">
+
+👧 Infantil
+
+</option>
+
+
+<option value="Nenhum">
+
+Nenhum
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+</div>
+
+<!-- ==========================
+INFORMAÇÕES COMPLEMENTARES
+========================== -->
+
+<div class="grid">
+
+
+<div class="campo">
+
+<label>
+
+Endereço
+
+</label>
+
+
+<input
+
+type="text"
+
+id="enderecoMembro"
+
+placeholder="Rua, número, bairro">
+
+</div>
+
+
+
+
+<div class="campo">
+
+<label>
+
+Cidade
+
+</label>
+
+
+<input
+
+type="text"
+
+id="cidadeMembro"
+
+placeholder="Cidade">
+
+</div>
+
+
+
+
+<div class="campo">
+
+<label>
+
+Congregação
+
+</label>
+
+
+<select id="congregacao">
+
+
+<option value="">
+
+Selecione
+
+</option>
+
+
+<option value="ADSA IPÊ - Sede">
+
+ADSA SEDE - MATRIZ
+
+</option>
+
+
+<option value="Congregação 1">
+
+ADSA IPE
+
+</option>
+
+
+<option value="Congregação 2">
+
+ADSA PIRAJUSSARA
+
+</option>
+
+
+</select>
+
+</div>
+
+
+
+
+<div class="campo">
+
+<label>
+
+Célula / Grupo
+
+</label>
+
+
+<input
+
+type="text"
+
+id="celula"
+
+placeholder="Nome da célula">
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="campo observacao">
+
+
+<label>
+
+Observações
+
+</label>
+
+
+<textarea
+
+id="observacoes"
+
+rows="5"
+
+placeholder="Informações adicionais sobre o membro">
+
+</textarea>
+
+
+</div>
+
+
+
+
+
+<!-- ==========================
+AÇÕES
+========================== -->
+
+
+<div class="acoesFormulario">
+
+
+<button
+
+class="btnSalvar"
+
+onclick="salvarMembro()">
+
+💾 Salvar Membro
+
+</button>
+
+
+
+<button
+
+class="btnCancelar"
+
+onclick="cancelarMembro()">
+
+❌ Cancelar
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+PESQUISA
+========================== -->
+
+
+<section class="pesquisa">
+
+
+<input
+
+type="text"
+
+id="pesquisarMembro"
+
+placeholder="Pesquisar membro..."
+
+onkeyup="pesquisarMembro()">
+
+
+</section>
+
+<!-- ==========================
+LISTA DE MEMBROS
+========================== -->
+
+<section class="listaMembros">
+
+
+<div class="cabecalhoLista">
+
+
+<div>
+
+<h2>
+
+📖 Membros Cadastrados
+
+</h2>
+
+
+<p>
+
+Gerencie os membros da ADSA IPÊ.
+
+</p>
+
+</div>
+
+
+
+
+
+<div class="filtros">
+
+
+<select id="filtroMinisterio">
+
+
+<option value="todos">
+
+Todos os ministérios
+
+</option>
+
+
+<option value="Mídia">
+
+📺 Mídia
+
+</option>
+
+
+<option value="Louvor">
+
+🎵 Louvor
+
+</option>
+
+
+<option value="Obreiro">
+
+🙏 Obreiro
+
+</option>
+
+
+<option value="Diaconato">
+
+⛪ Diaconato
+
+</option>
+
+
+</select>
+
+
+
+
+
+<select id="filtroBatizado">
+
+
+<option value="todos">
+
+Todos
+
+</option>
+
+
+<option value="Sim">
+
+💧 Batizados
+
+</option>
+
+
+<option value="Não">
+
+❌ Não batizados
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="tabelaContainer">
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+Nome
+</th>
+
+
+<th>
+Telefone
+</th>
+
+
+<th>
+Batizado
+</th>
+
+
+<th>
+Ministério
+</th>
+
+
+<th>
+Congregação
+</th>
+
+
+<th>
+Cadastro
+</th>
+
+
+<th>
+Ações
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+<tbody id="listaMembros">
+
+
+<tr>
+
+
+<td colspan="7">
+
+Nenhum membro cadastrado.
+
+</td>
+
+
+</tr>
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="../js/membros.js"></script>
+
+
+
+</body>
+
+
+</html>

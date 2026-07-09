@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | ADSA IPÊ System</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+body{
+    background:#f1f5f9;
+    color:#1e293b;
+}
+
+.layout{
+    display:flex;
+    min-height:100vh;
+}
+
+/* =====================================================
+   SIDEBAR COMPLETO COM SCROLL
+===================================================== */
+
+
+.sidebar{
+
+    width:270px;
+
+    height:100vh;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    background:#0f172a;
+
+    color:white;
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    z-index:1000;
+
+}
+
+
+
+/* ==========================
+   SCROLLBAR SIDEBAR
+========================== */
+
+
+.sidebar::-webkit-scrollbar{
+
+    width:7px;
+
+}
+
+
+
+.sidebar::-webkit-scrollbar-track{
+
+    background:#0b1220;
+
+}
+
+
+
+.sidebar::-webkit-scrollbar-thumb{
+
+    background:#334155;
+
+    border-radius:20px;
+
+}
+
+
+
+.sidebar::-webkit-scrollbar-thumb:hover{
+
+    background:#475569;
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+   LOGO
+========================== */
+
+
+.logo{
+
+    flex-shrink:0;
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+   MENU
+========================== */
+
+
+.menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    margin-top:30px;
+
+    padding-bottom:20px;
+
+    flex:1;
+
+}
+
+
+
+
+
+
+
+.menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    flex-shrink:0;
+
+}
+
+
+
+.menu a:hover{
+
+    background:#2563eb;
+
+}
+
+
+
+.menu a.active{
+
+    background:#2563eb;
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+   BOTÃO SAIR
+========================== */
+
+
+.btnLogout{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#dc2626;
+
+    color:white;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    margin-top:auto;
+
+    flex-shrink:0;
+
+}
+
+
+
+.btnLogout:hover{
+
+    background:#b91c1c;
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+   CONTEÚDO AO LADO
+========================== */
+
+
+.content{
+
+    margin-left:270px;
+
+    width:calc(100% - 270px);
+
+}
+
+
+
+
+
+
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+
+@media(max-width:768px){
+
+
+.sidebar{
+
+    width:80px;
+
+    padding:15px;
+
+}
+
+
+
+.content{
+
+    margin-left:80px;
+
+    width:calc(100% - 80px);
+
+}
+
+
+
+.menu a{
+
+    justify-content:center;
+
+}
+
+
+
+.menu a span{
+
+    display:none;
+
+}
+
+
+.btnLogout{
+
+    font-size:0;
+
+}
+
+
+.btnLogout::before{
+
+    content:"🚪";
+
+    font-size:22px;
+
+}
+
+
+}
+
+/* =======================
+   CONTEÚDO
+======================= */
+
+.content{
+
+    margin-left:270px;
+    width:calc(100% - 270px);
+    padding:30px;
+
+}
+
+.topbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+
+}
+
+.topbar h2{
+
+    font-size:30px;
+
+}
+
+.topbar p{
+
+    color:#64748b;
+
+}
+
+.profile{
+
+    width:50px;
+    height:50px;
+    background:#2563eb;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+
+}
+
+/* =======================
+   CARDS
+======================= */
+
+.cards{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+
+}
+
+.card{
+
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.card h3{
+
+    color:#64748b;
+    margin-bottom:15px;
+
+}
+
+.card strong{
+
+    display:block;
+    font-size:34px;
+    color:#0f172a;
+
+}
+
+.card p{
+
+    margin-top:8px;
+    color:#94a3b8;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="layout">
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<h1>ADSA IPÊ</h1>
+
+<p>Admin System</p>
+
+</div>
+
+<nav class="menu">
+
+<a class="active" href="#">🏠 Dashboard</a>
+
+<a href="pages/financeiro.html">💰 Financeiro</a>
+
+<a href="pages/membros.html">👥 Membros</a>
+
+<a href="pages/usuarios.html">👥 Usuários </a>
+
+<a href="pages/eventos.html">📅 Eventos</a>
+
+<a href="pages/transmissoes.html">📺 Transmissões</a>
+
+<a href="pages/ministerios.html">🙏 Ministérios</a>
+
+<a href="pages/escalas.html">📋 Escalas</a>
+
+<a href="pages/documentos.html">📂 Documentos</a>
+
+<a href="pages/avisos.html">📢 Avisos</a>
+
+<a href="pages/relatorios.html">📊 Relatórios</a>
+
+<a href="pages/configuracoes.html">⚙️ Configurações</a>
+
+</nav>
+
+<button class="logout" onclick="logout()">
+🚪 Sair
+</button>
+
+</aside>
+
+<main class="content">
+
+<div class="topbar">
+
+<div>
+
+<h2>Dashboard</h2>
+
+<p>Bem-vindo ao Painel Administrativo da ADSA IPÊ</p>
+
+</div>
+
+<div class="profile">
+A
+</div>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>👥 Membros</h3>
+
+<strong id="totalMembros">0</strong>
+
+<p>Membros cadastrados</p>
+
+</div>
+
+<div class="card">
+
+<h3>💰 Financeiro</h3>
+
+<strong id="saldoFinanceiro">R$ 0,00</strong>
+
+<p>Saldo atual</p>
+
+</div>
+
+<div class="card">
+
+<h3>📅 Eventos</h3>
+
+<strong id="totalEventos">0</strong>
+
+<p>Eventos cadastrados</p>
+
+</div>
+
+<div class="card">
+
+<h3>📺 Transmissões</h3>
+
+<strong id="totalLives">0</strong>
+
+<p>Transmissões realizadas</p>
+
+</div>
+
+<!-- =======================
+     PAINÉIS PRINCIPAIS
+======================= -->
+
+<div class="dashboard-grid">
+
+    <!-- Avisos -->
+
+    <section class="panel">
+
+        <h2>📢 Avisos</h2>
+
+        <div id="listaAvisos" class="empty">
+
+            Nenhum aviso publicado.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Próximos Eventos -->
+
+    <section class="panel">
+
+        <h2>📅 Próximos Eventos</h2>
+
+        <div id="listaEventos" class="empty">
+
+            Nenhum evento cadastrado.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Atividades -->
+
+    <section class="panel">
+
+        <h2>🕒 Atividades Recentes</h2>
+
+        <div id="atividades" class="empty">
+
+            Nenhuma atividade registrada.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Gráfico -->
+
+    <section class="panel">
+
+        <h2>📊 Resumo Financeiro</h2>
+
+        <canvas id="graficoFinanceiro"></canvas>
+
+    </section>
+
+</div>
+
+
+
+<!-- =======================
+     ATALHOS
+======================= -->
+
+<section class="atalhos">
+
+<h2>⚡ Acesso Rápido</h2>
+
+<div class="atalhos-grid">
+
+<a href="pages/financeiro.html" class="atalho">
+💰
+<span>Financeiro</span>
+</a>
+
+<a href="pages/membros.html" class="atalho">
+👥
+<span>Membros</span>
+</a>
+
+<a href="pages/eventos.html" class="atalho">
+📅
+<span>Eventos</span>
+</a>
+
+<a href="pages/transmissoes.html" class="atalho">
+📺
+<span>Transmissão</span>
+</a>
+
+<a href="pages/avisos.html" class="atalho">
+📢
+<span>Avisos</span>
+</a>
+
+<a href="pages/escalas.html" class="atalho">
+📋
+<span>Escalas</span>
+</a>
+
+<a href="pages/documentos.html" class="atalho">
+📂
+<span>Documentos</span>
+</a>
+
+<a href="pages/configuracoes.html" class="atalho">
+⚙️
+<span>Configurações</span>
+</a>
+
+</div>
+
+</section>
+
+<style>
+
+/* =======================
+   GRID PRINCIPAL
+======================= */
+
+.dashboard-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+margin-top:30px;
+
+}
+
+.panel{
+
+background:white;
+
+border-radius:18px;
+
+padding:25px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+min-height:260px;
+
+}
+
+.panel h2{
+
+margin-bottom:20px;
+
+color:#0f172a;
+
+}
+
+.empty{
+
+padding:30px;
+
+border:2px dashed #cbd5e1;
+
+border-radius:12px;
+
+text-align:center;
+
+color:#64748b;
+
+}
+
+
+
+/* =======================
+   ATALHOS
+======================= */
+
+.atalhos{
+
+margin-top:30px;
+
+}
+
+.atalhos h2{
+
+margin-bottom:20px;
+
+}
+
+.atalhos-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+.atalho{
+
+background:white;
+
+border-radius:18px;
+
+padding:30px;
+
+text-decoration:none;
+
+color:#0f172a;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.atalho:hover{
+
+transform:translateY(-5px);
+
+background:#2563eb;
+
+color:white;
+
+}
+
+.atalho span{
+
+margin-top:10px;
+
+font-weight:bold;
+
+}
+
+#graficoFinanceiro{
+
+width:100%;
+
+height:220px;
+
+}
+
+
+
+/* =======================
+   RESPONSIVO
+======================= */
+
+@media(max-width:1200px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.atalhos-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.dashboard-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.sidebar{
+
+width:80px;
+
+}
+
+.sidebar .logo p,
+
+.sidebar .logo h1{
+
+display:none;
+
+}
+
+.content{
+
+margin-left:80px;
+
+width:calc(100% - 80px);
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.atalhos-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+/* ===============================
+   DASHBOARD ADSA IPÊ
+   =============================== */
+
+
+/* ---------- LOGOUT ---------- */
+
+function logout(){
+
+    if(confirm("Deseja realmente sair?")){
+
+        window.location.href="../AUTH/login.html";
+
+    }
+
+}
+
+
+/* ---------- FINANCEIRO ---------- */
+
+let financeiro =
+JSON.parse(localStorage.getItem("financeiro")) || [];
+
+
+let entradas = 0;
+let saidas = 0;
+
+
+financeiro.forEach(item=>{
+
+    if(item.tipo==="entrada"){
+
+        entradas += item.valor;
+
+    }else{
+
+        saidas += item.valor;
+
+    }
+
+});
+
+
+let saldo = entradas-saidas;
+
+
+document.getElementById("saldoFinanceiro").innerHTML =
+
+"R$ " +
+
+saldo.toLocaleString("pt-BR",{
+
+style:"currency",
+
+currency:"BRL"
+
+}).replace("R$ ","");
+
+
+/* ---------- MEMBROS ---------- */
+
+let membros =
+
+JSON.parse(localStorage.getItem("membros")) || [];
+
+
+document.getElementById("totalMembros").innerHTML =
+
+membros.length;
+
+
+/* ---------- EVENTOS ---------- */
+
+let eventos =
+
+JSON.parse(localStorage.getItem("eventos")) || [];
+
+
+document.getElementById("totalEventos").innerHTML =
+
+eventos.length;
+
+
+/* ---------- TRANSMISSÕES ---------- */
+
+let lives =
+
+JSON.parse(localStorage.getItem("transmissoes")) || [];
+
+
+document.getElementById("totalLives").innerHTML =
+
+lives.length;
+
+
+/* ---------- AVISOS ---------- */
+
+let avisos =
+
+JSON.parse(localStorage.getItem("avisos")) || [];
+
+
+if(avisos.length>0){
+
+let html="";
+
+avisos.forEach(aviso=>{
+
+html +=
+
+`<p style="margin-bottom:12px;">
+📢 ${aviso.titulo}
+</p>`;
+
+});
+
+document.getElementById("listaAvisos").innerHTML=html;
+
+}
+
+
+/* ---------- EVENTOS ---------- */
+
+if(eventos.length>0){
+
+let html="";
+
+eventos.forEach(evento=>{
+
+html +=
+
+`<p style="margin-bottom:12px;">
+📅 ${evento.nome}
+</p>`;
+
+});
+
+document.getElementById("listaEventos").innerHTML=html;
+
+}
+
+
+/* ---------- ATIVIDADES ---------- */
+
+document.getElementById("atividades").innerHTML=
+
+`
+<p>✅ Dashboard iniciado.</p>
+<p>💾 Sistema conectado.</p>
+<p>👤 Usuário autenticado.</p>
+`;
+
+
+/* ---------- GRÁFICO ---------- */
+
+const ctx =
+
+document.getElementById("graficoFinanceiro");
+
+
+new Chart(ctx,{
+
+type:"bar",
+
+data:{
+
+labels:[
+
+"Entradas",
+
+"Saídas"
+
+],
+
+datasets:[{
+
+label:"Financeiro",
+
+data:[
+
+entradas,
+
+saidas
+
+]
+
+}]
+
+},
+
+options:{
+
+responsive:true,
+
+plugins:{
+
+legend:{
+
+display:false
+
+}
+
+},
+
+scales:{
+
+y:{
+
+beginAtZero:true
+
+}
+
+}
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>

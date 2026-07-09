@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portal do Membro | ADSA IPÊ</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Arial, sans-serif;
+}
+
+
+body{
+
+    background:#f1f5f9;
+    color:#1e293b;
+
+}
+
+
+.layout{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+
+
+/* ======================
+ SIDEBAR
+====================== */
+
+
+.sidebar{
+
+    width:260px;
+    height:100vh;
+    position:fixed;
+    background:#0f172a;
+    color:white;
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+
+}
+
+
+.logo{
+
+    text-align:center;
+    margin-bottom:35px;
+
+}
+
+
+.logo h1{
+
+    color:#60a5fa;
+    font-size:27px;
+
+}
+
+
+.logo p{
+
+    color:#94a3b8;
+    font-size:14px;
+
+}
+
+
+
+.menu{
+
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+
+}
+
+
+
+.menu a{
+
+    color:white;
+    text-decoration:none;
+    padding:13px;
+    border-radius:10px;
+    transition:.3s;
+
+}
+
+
+
+.menu a:hover,
+.menu .active{
+
+    background:#2563eb;
+
+}
+
+
+
+.sair{
+
+    margin-top:auto;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#dc2626;
+    color:white;
+    cursor:pointer;
+
+}
+
+
+
+/* ======================
+ CONTEÚDO
+====================== */
+
+
+.content{
+
+    margin-left:260px;
+    width:calc(100% - 260px);
+    padding:30px;
+
+}
+
+
+
+.topbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+
+}
+
+
+.topbar h2{
+
+    font-size:30px;
+
+}
+
+
+
+.usuario{
+
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    font-size:20px;
+
+}
+
+
+
+/* ======================
+ CARDS
+====================== */
+
+
+.cards{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+
+}
+
+
+
+.card{
+
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+.card h3{
+
+    color:#64748b;
+    margin-bottom:15px;
+
+}
+
+
+.card strong{
+
+    font-size:30px;
+    display:block;
+    color:#0f172a;
+
+}
+
+
+
+.card p{
+
+    color:#94a3b8;
+    margin-top:8px;
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="layout">
+
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+<h1>ADSA IPÊ</h1>
+
+<p>Portal do Membro</p>
+
+</div>
+
+
+
+<nav class="menu">
+
+
+<a class="active" href="#">
+🏠 Início
+</a>
+
+
+<a href="perfil.html">
+👤 Meu Perfil
+</a>
+
+
+<a href="agenda.html">
+📅 Agenda
+</a>
+
+
+<a href="avisos.html">
+📢 Avisos
+</a>
+
+
+<a href="eventos.html">
+⛪ Eventos
+</a>
+
+
+<a href="escalas.html">
+📋 Escalas
+</a>
+
+
+<a href="estudos.html">
+📖 Estudos
+</a>
+
+
+<a href="documentos.html">
+📂 Documentos
+</a>
+
+
+<a href="contribuicoes.html">
+💰 Contribuições
+</a>
+
+
+</nav>
+
+
+
+<button class="sair" onclick="sair()">
+
+🚪 Sair
+
+</button>
+
+
+</aside>
+
+
+
+<main class="content">
+
+
+
+<div class="topbar">
+
+
+<div>
+
+<h2>Olá, membro 👋</h2>
+
+<p>Bem-vindo ao Portal ADSA IPÊ</p>
+
+</div>
+
+
+
+<div class="usuario" id="avatar">
+
+M
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>👤 Perfil</h3>
+
+<strong id="nomeUsuario">
+-
+</strong>
+
+<p>Meu cadastro</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>📅 Eventos</h3>
+
+<strong id="totalEventos">
+0
+</strong>
+
+<p>Próximos eventos</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>📢 Avisos</h3>
+
+<strong id="totalAvisos">
+0
+</strong>
+
+<p>Avisos disponíveis</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>📋 Escalas</h3>
+
+<strong id="totalEscalas">
+0
+</strong>
+
+<p>Minhas escalas</p>
+
+</div>
+
+
+
+</div>
+
+<!-- =========================
+     PAINÉIS DO MEMBRO
+========================= -->
+
+<div class="painel-grid">
+
+
+<section class="painel">
+
+<h2>📢 Últimos Avisos</h2>
+
+<div id="avisos">
+
+<p class="vazio">
+Nenhum aviso disponível.
+</p>
+
+</div>
+
+</section>
+
+
+
+
+<section class="painel">
+
+<h2>📅 Próximos Eventos</h2>
+
+<div id="eventos">
+
+<p class="vazio">
+Nenhum evento cadastrado.
+</p>
+
+</div>
+
+</section>
+
+
+
+
+<section class="painel">
+
+<h2>📋 Minha Escala</h2>
+
+<div id="escalas">
+
+<p class="vazio">
+Nenhuma escala encontrada.
+</p>
+
+</div>
+
+</section>
+
+
+
+
+<section class="painel">
+
+<h2>📖 Estudos Recentes</h2>
+
+<div id="estudos">
+
+<p class="vazio">
+Nenhum estudo publicado.
+</p>
+
+</div>
+
+</section>
+
+
+</div>
+
+
+
+<style>
+
+
+/* =========================
+   PAINÉIS
+========================= */
+
+
+.painel-grid{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+margin-top:30px;
+
+}
+
+
+
+.painel{
+
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+min-height:230px;
+
+}
+
+
+
+.painel h2{
+
+margin-bottom:20px;
+font-size:20px;
+
+}
+
+
+
+.vazio{
+
+padding:25px;
+text-align:center;
+border:2px dashed #cbd5e1;
+border-radius:12px;
+color:#64748b;
+
+}
+
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+
+@media(max-width:1000px){
+
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.painel-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.sidebar{
+
+width:80px;
+
+}
+
+
+.logo h1,
+.logo p{
+
+display:none;
+
+}
+
+
+.content{
+
+margin-left:80px;
+width:calc(100% - 80px);
+
+}
+
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+</style>
+
+
+
+<script>
+
+
+// Carrega usuário logado
+
+let usuario =
+
+JSON.parse(
+
+localStorage.getItem("usuarioLogado")
+
+);
+
+
+
+if(usuario){
+
+
+document.getElementById("nomeUsuario").innerHTML =
+
+usuario.nome;
+
+
+
+document.getElementById("avatar").innerHTML =
+
+usuario.nome.charAt(0).toUpperCase();
+
+
+}
+
+
+
+// Logout
+
+function sair(){
+
+
+localStorage.removeItem("usuarioLogado");
+
+
+window.location.href="../AUTH/login.html";
+
+
+}
+
+
+
+// Avisos
+
+let avisos =
+
+JSON.parse(
+
+localStorage.getItem("avisos")
+
+) || [];
+
+
+
+if(avisos.length > 0){
+
+
+document.getElementById("totalAvisos").innerHTML =
+
+avisos.length;
+
+
+
+let lista="";
+
+
+avisos.forEach(item=>{
+
+
+lista += `
+
+<p style="margin-bottom:12px">
+
+📢 ${item.titulo}
+
+</p>
+
+`;
+
+
+});
+
+
+document.getElementById("avisos").innerHTML = lista;
+
+
+}
+
+
+
+
+// Eventos
+
+let eventos =
+
+JSON.parse(
+
+localStorage.getItem("eventos")
+
+) || [];
+
+
+
+if(eventos.length > 0){
+
+
+document.getElementById("totalEventos").innerHTML =
+
+eventos.length;
+
+
+
+let lista="";
+
+
+eventos.forEach(item=>{
+
+
+lista += `
+
+<p style="margin-bottom:12px">
+
+📅 ${item.nome}
+
+</p>
+
+`;
+
+
+});
+
+
+document.getElementById("eventos").innerHTML = lista;
+
+
+}
+
+
+
+
+// Escalas
+
+let escalas =
+
+JSON.parse(
+
+localStorage.getItem("escalas")
+
+) || [];
+
+
+
+if(escalas.length > 0){
+
+
+document.getElementById("totalEscalas").innerHTML =
+
+escalas.length;
+
+
+
+document.getElementById("escalas").innerHTML =
+
+"Você possui escalas cadastradas.";
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

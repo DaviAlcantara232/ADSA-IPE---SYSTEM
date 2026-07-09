@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+
+<head>
+
+
+<meta charset="UTF-8">
+
+
+<meta 
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+
+<title>
+
+Avisos | ADSA IPÊ
+
+</title>
+
+
+
+<link rel="stylesheet" href="../css/avisos.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="layout">
+
+
+
+
+
+
+<!-- ==========================
+SIDEBAR
+========================== -->
+
+
+<aside class="sidebar">
+
+
+
+<div class="logo">
+
+
+<h1>
+
+ADSA IPÊ
+
+</h1>
+
+
+<p>
+
+Painel Administrativo
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<nav class="menu">
+
+
+
+<a href="../dashboard.html">
+
+🏠 Dashboard
+
+</a>
+
+
+
+
+<a href="financeiro.html">
+
+💰 Financeiro
+
+</a>
+
+
+
+
+<a href="usuarios.html">
+
+👥 Usuários
+
+</a>
+
+
+
+
+<a href="membros.html">
+
+📖 Membros
+
+</a>
+
+
+
+
+<a href="eventos.html">
+
+📅 Eventos
+
+</a>
+
+
+
+
+<a class="active" href="avisos.html">
+
+📢 Avisos
+
+</a>
+
+
+
+
+<a href="configuracoes.html">
+
+⚙️ Configurações
+
+</a>
+
+
+
+
+</nav>
+
+
+
+
+
+
+
+
+<button
+
+class="btnLogout"
+
+onclick="logout()">
+
+🚪 Sair
+
+</button>
+
+
+
+
+
+
+</aside>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+CONTEÚDO
+========================== -->
+
+
+<main class="content">
+
+
+
+
+
+<header class="topbar">
+
+
+<div>
+
+
+<h2>
+
+Central de Avisos
+
+</h2>
+
+
+
+<p>
+
+Crie e gerencie comunicados da igreja.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+<div class="avatar">
+
+A
+
+</div>
+
+
+
+</header>
+
+<!-- ==========================
+   CARDS DE AVISOS
+========================== -->
+
+
+<section class="cards">
+
+
+
+<div class="card">
+
+
+<h3>
+
+📢 Total de Avisos
+
+</h3>
+
+
+<strong id="totalAvisos">
+
+0
+
+</strong>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+✅ Publicados
+
+</h3>
+
+
+<strong id="avisosPublicados">
+
+0
+
+</strong>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+🚨 Urgentes
+
+</h3>
+
+
+<strong id="avisosUrgentes">
+
+0
+
+</strong>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+📝 Rascunhos
+
+</h3>
+
+
+<strong id="avisosRascunho">
+
+0
+
+</strong>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+   FORMULÁRIO DE AVISO
+========================== -->
+
+
+<section class="formulario">
+
+
+
+<div class="tituloFormulario">
+
+
+<h2>
+
+➕ Criar Aviso
+
+</h2>
+
+
+<p>
+
+Publique informações para a igreja.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="grid">
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Título do Aviso
+
+</label>
+
+
+<input
+
+type="text"
+
+id="tituloAviso"
+
+placeholder="Ex: Culto especial domingo">
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Categoria
+
+</label>
+
+
+<select id="categoriaAviso">
+
+
+<option value="">
+
+Selecione
+
+</option>
+
+
+
+<option value="Culto">
+
+⛪ Culto
+
+</option>
+
+
+
+<option value="Evento">
+
+📅 Evento
+
+</option>
+
+
+
+<option value="Ministério">
+
+👥 Ministério
+
+</option>
+
+
+
+<option value="Geral">
+
+📢 Geral
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Prioridade
+
+</label>
+
+
+<select id="prioridadeAviso">
+
+
+<option value="Normal">
+
+🟢 Normal
+
+</option>
+
+
+
+<option value="Importante">
+
+🟡 Importante
+
+</option>
+
+
+
+<option value="Urgente">
+
+🔴 Urgente
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Responsável
+
+</label>
+
+
+<input
+
+type="text"
+
+id="responsavelAviso"
+
+placeholder="Nome do responsável">
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Data de Publicação
+
+</label>
+
+
+<input
+
+type="date"
+
+id="dataAviso">
+
+
+</div>
+
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+
+Status
+
+</label>
+
+
+<select id="statusAviso">
+
+
+<option value="Publicado">
+
+✅ Publicado
+
+</option>
+
+
+
+<option value="Rascunho">
+
+📝 Rascunho
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+</div>
+
+<!-- ==========================
+   MENSAGEM DO AVISO
+========================== -->
+
+
+<div class="campo descricao">
+
+
+<label>
+
+Mensagem
+
+</label>
+
+
+
+<textarea
+
+id="mensagemAviso"
+
+rows="6"
+
+placeholder="Digite o conteúdo do aviso...">
+
+</textarea>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+   AÇÕES
+========================== -->
+
+
+<div class="acoesFormulario">
+
+
+<button
+
+class="btnSalvar"
+
+onclick="salvarAviso()">
+
+💾 Salvar Aviso
+
+</button>
+
+
+
+
+
+<button
+
+class="btnCancelar"
+
+onclick="cancelarAviso()">
+
+❌ Cancelar
+
+</button>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+   PESQUISA
+========================== -->
+
+
+<section class="pesquisa">
+
+
+<input
+
+type="text"
+
+id="pesquisarAviso"
+
+oninput="pesquisarAviso()"
+
+placeholder="🔍 Pesquisar aviso...">
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+   LISTA DE AVISOS
+========================== -->
+
+
+<section class="listaAvisos">
+
+
+
+<div class="cabecalhoLista">
+
+
+<div>
+
+
+<h2>
+
+📢 Avisos Cadastrados
+
+</h2>
+
+
+<p>
+
+Gerencie os comunicados da ADSA IPÊ.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="filtros">
+
+
+<select id="filtroPrioridade">
+
+
+<option value="todos">
+
+Todas prioridades
+
+</option>
+
+
+
+<option value="Normal">
+
+🟢 Normal
+
+</option>
+
+
+
+<option value="Importante">
+
+🟡 Importante
+
+</option>
+
+
+
+<option value="Urgente">
+
+🔴 Urgente
+
+</option>
+
+
+</select>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="tabelaContainer">
+
+
+
+<table>
+
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+
+Título
+
+</th>
+
+
+<th>
+
+Categoria
+
+</th>
+
+
+<th>
+
+Prioridade
+
+</th>
+
+
+<th>
+
+Data
+
+</th>
+
+
+<th>
+
+Status
+
+</th>
+
+
+<th>
+
+Responsável
+
+</th>
+
+
+<th>
+
+Ações
+
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+
+
+<tbody id="listaAvisos">
+
+
+<tr>
+
+
+<td colspan="7">
+
+Nenhum aviso cadastrado.
+
+</td>
+
+
+</tr>
+
+
+</tbody>
+
+
+
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</section>
+
+<!-- ==========================
+   VISUALIZAÇÃO DO AVISO
+========================== -->
+
+
+<section class="visualizacaoAviso">
+
+
+<div class="tituloFormulario">
+
+
+<h2>
+
+👁️ Pré-visualização
+
+</h2>
+
+
+<p>
+
+Veja como o aviso aparecerá para os membros.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="previewCard">
+
+
+
+<div class="previewHeader">
+
+
+<h3 id="previewTitulo">
+
+Título do aviso
+
+</h3>
+
+
+<span id="previewPrioridade">
+
+Normal
+
+</span>
+
+
+</div>
+
+
+
+
+
+<p id="previewMensagem">
+
+A mensagem aparecerá aqui...
+
+</p>
+
+
+
+
+
+
+<div class="previewInfo">
+
+
+<span id="previewCategoria">
+
+Categoria
+
+</span>
+
+
+
+<span id="previewData">
+
+Data
+
+</span>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ==========================
+   AÇÕES ADMINISTRATIVAS
+========================== -->
+
+
+<section class="acoesAdmin">
+
+
+
+<button
+
+class="btnPublicar"
+
+onclick="publicarAvisoRapido()">
+
+🚀 Publicar Agora
+
+</button>
+
+
+
+
+
+<button
+
+class="btnLimpar"
+
+onclick="limparTodosAvisos()">
+
+🗑️ Limpar Avisos
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ==========================
+   SCRIPT
+========================== -->
+
+
+<script src="../js/avisos.js"></script>
+
+
+
+
+
+</body>
+
+
+</html>

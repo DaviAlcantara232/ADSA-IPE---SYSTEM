@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Financeiro | ADSA IPÊ</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+
+body{
+    background:#f3f4f6;
+}
+
+
+.layout{
+    display:flex;
+}
+
+
+
+/* SIDEBAR */
+
+
+.sidebar{
+
+    width:280px;
+
+    height:100vh;
+
+    background:#111827;
+
+    color:white;
+
+    position:fixed;
+
+    padding:25px;
+
+}
+
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+
+.logo h2{
+
+    font-size:28px;
+
+}
+
+
+
+.menu a{
+
+    display:block;
+
+    padding:13px;
+
+    margin-bottom:8px;
+
+    color:#d1d5db;
+
+    text-decoration:none;
+
+    border-radius:10px;
+
+}
+
+
+
+.menu a:hover,
+.menu .active{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+
+
+
+.logout{
+
+    position:absolute;
+
+    bottom:20px;
+
+    width:230px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#dc2626;
+
+    color:white;
+
+}
+
+
+
+/* CONTEÚDO */
+
+
+.content{
+
+    margin-left:280px;
+
+    padding:30px;
+
+    width:100%;
+
+}
+
+
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.voltar{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+}
+
+
+
+/* CARDS */
+
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+
+.card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+
+
+.card strong{
+
+    display:block;
+
+    font-size:32px;
+
+    margin-top:15px;
+
+}
+
+
+
+
+
+/* FORM */
+
+.formulario{
+
+    margin-top:30px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+}
+
+
+
+input,
+select{
+
+    width:100%;
+
+    padding:13px;
+
+    margin-top:12px;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+}
+
+
+
+
+button{
+
+    cursor:pointer;
+
+}
+
+
+
+.adicionar{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:14px;
+
+    background:#16a34a;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+}
+
+
+
+.zerar{
+
+    width:100%;
+
+    margin-top:10px;
+
+    padding:14px;
+
+    background:#dc2626;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+}
+
+
+
+
+
+/* TABELA */
+
+
+.tabela{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    margin-top:30px;
+
+}
+
+
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+
+th,td{
+
+    padding:15px;
+
+    border-bottom:1px solid #ddd;
+
+    text-align:left;
+
+}
+
+
+
+.entrada{
+
+    color:#16a34a;
+
+}
+
+
+
+.saida{
+
+    color:#dc2626;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="layout">
+
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+<h2>ADSA IPÊ</h2>
+
+</div>
+
+
+
+<nav class="menu">
+
+<a href="../dashboard.html">
+
+🏠 Dashboard
+
+</a>
+
+
+<a class="active">
+
+💰 Financeiro
+
+</a>
+
+
+<a>
+
+👥 Membros
+
+</a>
+
+
+<a>
+
+📅 Eventos
+
+</a>
+
+</nav>
+
+
+
+
+<button class="logout" onclick="sair()">
+
+🚪 Sair
+
+</button>
+
+
+
+</aside>
+
+
+
+
+
+
+<main class="content">
+
+
+
+<div class="header">
+
+
+<div>
+
+<h1>
+
+Financeiro
+
+</h1>
+
+<p>
+
+Controle financeiro da igreja
+
+</p>
+
+</div>
+
+
+
+<a class="voltar" href="../dashboard.html">
+
+⬅️ Dashboard
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>
+
+Entradas
+
+</h3>
+
+<strong id="entradas">
+
+R$ 0,00
+
+</strong>
+
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+
+Saídas
+
+</h3>
+
+<strong id="saidas">
+
+R$ 0,00
+
+</strong>
+
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+
+Saldo
+
+</h3>
+
+<strong id="saldo">
+
+R$ 0,00
+
+</strong>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="formulario">
+
+
+<h2>
+
+Novo lançamento
+
+</h2>
+
+
+
+<select id="tipo">
+
+
+<option value="entrada">
+
+Entrada
+
+</option>
+
+
+<option value="saida">
+
+Saída
+
+</option>
+
+
+</select>
+
+
+
+
+
+
+<select id="categoria">
+
+
+<option>
+
+🙏 Dízimo
+
+</option>
+
+
+<option>
+
+🎁 Oferta
+
+</option>
+
+
+<option>
+
+💡 Conta
+
+</option>
+
+
+<option>
+
+👥 Salário
+
+</option>
+
+
+<option>
+
+📌 Outros
+
+</option>
+
+
+</select>
+
+
+
+
+
+
+<input 
+id="descricao"
+placeholder="Descrição"
+/>
+
+
+
+
+
+<input 
+id="valor"
+type="number"
+placeholder="Valor"
+/>
+
+
+
+
+
+
+<button class="adicionar" onclick="adicionar()">
+
+Adicionar lançamento
+
+</button>
+
+
+
+<button class="zerar" onclick="zerar()">
+
+🗑️ Zerar financeiro
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="tabela">
+
+
+<h2>
+
+Histórico
+
+</h2>
+
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>
+Data
+</th>
+
+<th>
+Categoria
+</th>
+
+<th>
+Descrição
+</th>
+
+<th>
+Valor
+</th>
+
+</tr>
+
+</thead>
+
+
+
+<tbody id="lista">
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+let dados =
+JSON.parse(localStorage.getItem("financeiro")) || [];
+
+
+
+
+function atualizar(){
+
+
+let entradas = 0;
+
+let saidas = 0;
+
+
+
+dados.forEach(item=>{
+
+
+if(item.tipo=="entrada"){
+
+entradas += item.valor;
+
+}else{
+
+saidas += item.valor;
+
+}
+
+
+});
+
+
+
+
+document.getElementById("entradas").innerHTML =
+"R$ "+entradas.toFixed(2);
+
+
+
+document.getElementById("saidas").innerHTML =
+"R$ "+saidas.toFixed(2);
+
+
+
+document.getElementById("saldo").innerHTML =
+"R$ "+(entradas-saidas).toFixed(2);
+
+
+
+
+
+
+let tabela="";
+
+
+
+dados.forEach(item=>{
+
+
+tabela += `
+
+<tr>
+
+<td>${item.data}</td>
+
+<td>${item.categoria}</td>
+
+<td>${item.descricao}</td>
+
+<td class="${item.tipo}">
+
+${item.tipo=="entrada" ? "+" : "-"} R$ ${item.valor.toFixed(2)}
+
+</td>
+
+</tr>
+
+`;
+
+
+
+});
+
+
+
+document.getElementById("lista").innerHTML=tabela;
+
+
+}
+
+
+
+
+
+
+
+function adicionar(){
+
+
+let item={
+
+
+tipo:document.getElementById("tipo").value,
+
+categoria:document.getElementById("categoria").value,
+
+descricao:document.getElementById("descricao").value,
+
+valor:Number(document.getElementById("valor").value),
+
+data:new Date().toLocaleDateString()
+
+
+};
+
+
+
+if(!item.descricao || !item.valor){
+
+alert("Preencha todos os campos");
+
+return;
+
+}
+
+
+
+dados.push(item);
+
+
+
+localStorage.setItem(
+
+"financeiro",
+
+JSON.stringify(dados)
+
+);
+
+
+
+atualizar();
+
+
+}
+
+
+
+
+
+
+
+function zerar(){
+
+
+if(confirm("Deseja zerar todo o financeiro?")){
+
+
+dados=[];
+
+
+localStorage.removeItem("financeiro");
+
+
+atualizar();
+
+
+}
+
+
+}
+
+
+
+
+
+function sair(){
+
+window.location.href="../../AUTH/index.html";
+
+}
+
+
+
+
+atualizar();
+
+
+</script>
+
+
+
+</body>
+
+</html>
