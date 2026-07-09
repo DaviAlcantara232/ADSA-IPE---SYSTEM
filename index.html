@@ -5,95 +5,179 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description" content="ADSA IPÊ - Igreja Assembleia de Deus.">
 
-    <meta name="theme-color" content="#0B1F3A">
+    <title>
+        ADSA IPÊ
+    </title>
 
-    <title>ADSA IPÊ</title>
 
-    <link rel="icon" href="assets/icons/favicon.png">
+
+    <!-- Fonte -->
+
+    <link 
+        rel="preconnect" 
+        href="https://fonts.googleapis.com"
+    >
+
+    <link 
+        rel="preconnect" 
+        href="https://fonts.gstatic.com" 
+        crossorigin
+    >
+
+
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" 
+        rel="stylesheet"
+    >
+
+
+
 
     <!-- CSS -->
 
-    <link rel="stylesheet" href="CSS/design-system.css">
+    <link rel="stylesheet" href="css/reset.css">
 
-    <link rel="stylesheet" href="CSS/layout.css">
+    <link rel="stylesheet" href="css/design-system.css">
 
-    <link rel="stylesheet" href="CSS/components.css">
+    <link rel="stylesheet" href="css/components.css">
 
-    <link rel="stylesheet" href="CSS/animations.css">
+    <link rel="stylesheet" href="css/layout.css">
 
-    <link rel="stylesheet" href="CSS/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
 
-    <link rel="stylesheet" href="CSS/pages/home.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- CSS página -->
+
+    <link rel="stylesheet" href="css/pages/home.css">
+
 
 </head>
+
+
 
 <body>
 
 
 
+<!-- =========================
+     HEADER
+========================= -->
 
 
-<!-- ==========================================================
-HEADER
-=========================================================== -->
-
-<header class="header">
-
-    <div class="container header-container">
-
-        <div class="logo">
-
-            <img src="assets/images/logo.png" alt="Logo ADSA IPÊ">
-
-            <h1>ADSA IPÊ</h1>
-
-        </div>
+<header>
 
 
+    <nav class="navbar">
 
-        <nav class="navigation">
 
-            <a href="index.html">Início</a>
+        <!-- LOGO -->
 
-            <a href="sobre.html">Sobre</a>
+        <a 
+            href="index.html" 
+            class="logo"
+        >
 
-            <a href="ministerios.html">Ministérios</a>
+            <img 
+                src="assets/images/logo-adsa.png"
+                alt="ADSA IPÊ"
+            >
 
-            <a href="eventos.html">Eventos</a>
-
-            <a href="transmissao.html">Transmissão</a>
-
-            <a href="galeria.html">Galeria</a>
-
-            <a href="pedidos-oracao.html">Oração</a>
-
-            <a href="contato.html">Contato</a>
-
-        </nav>
+        </a>
 
 
 
-        <div class="header-actions">
 
-            <a href="../PORTAL-MEMBRO/login.html" class="btn-secondary">
+        <!-- BOTÃO MENU -->
 
-                Área do Membro
+        <button 
+            class="menu-toggle"
+            aria-label="Abrir menu"
+        >
 
-            </a>
+            <span></span>
 
-            <a href="transmissao.html" class="btn-live">
+            <span></span>
 
-                🔴 Ao Vivo
+            <span></span>
 
-            </a>
+        </button>
 
-        </div>
 
-    </div>
+
+
+
+        <!-- LINKS -->
+
+        <ul class="nav-links">
+
+
+            <li>
+                <a href="index.html">
+                    Início
+                </a>
+            </li>
+
+
+            <li>
+                <a href="sobre.html">
+                    Sobre
+                </a>
+            </li>
+
+
+            <li>
+                <a href="eventos.html">
+                    Eventos
+                </a>
+            </li>
+
+
+            <li>
+                <a href="ministerios.html">
+                    Ministérios
+                </a>
+            </li>
+
+
+            <li>
+                <a href="transmissao.html">
+                    Transmissão
+                </a>
+            </li>
+
+
+            <li>
+                <a href="contato.html">
+                    Contato
+                </a>
+            </li>
+
+
+            <li>
+
+                <a 
+                    href="login.html"
+                    class="btn"
+                >
+                    Entrar
+                </a>
+
+            </li>
+
+
+        </ul>
+
+
+    </nav>
+
 
 </header>
 
@@ -101,594 +185,555 @@ HEADER
 
 
 
+<main>
 
+    <!-- =========================
+     HERO
+========================= -->
 
-<!-- ==========================================================
-HERO
-=========================================================== -->
 
 <section class="hero">
 
-    <div class="hero-overlay"></div>
 
-    <div class="container hero-content">
+    <div class="hero-content">
 
-        <span class="hero-badge">
-
-            Bem-vindo à ADSA IPÊ
-
-        </span>
 
         <h1>
 
-            Um lugar para viver
-            a presença de Deus.
+            Bem-vindo à
+
+            <span>
+                ADSA IPÊ
+            </span>
 
         </h1>
 
+
+
         <p>
 
-            Cultos presenciais e online,
-            comunhão, discipulado e transformação
-            de vidas para toda a família.
+            Uma plataforma digital para conectar
+            membros, visitantes e toda a comunidade.
 
         </p>
 
+
+
         <div class="hero-buttons">
 
-            <a href="transmissao.html" class="btn-primary">
 
-                Assistir ao Culto
+            <a 
+                href="login.html"
+                class="btn"
+            >
 
-            </a>
-
-            <a href="sobre.html" class="btn-outline">
-
-                Conheça a Igreja
+                Entrar na plataforma
 
             </a>
 
+
+
+            <a 
+                href="#avisos"
+                class="btn btn-outline"
+            >
+
+                Ver avisos
+
+            </a>
+
+
         </div>
+
 
     </div>
 
+
+
+
+
+    <div class="hero-image">
+
+
+        <img 
+            src="assets/images/igreja.jpg"
+            alt="ADSA IPÊ"
+        >
+
+
+    </div>
+
+
+
 </section>
 
-<!-- ==========================================================
-INSTAGRAM
-=========================================================== -->
 
-<section class="instagram-section">
 
-    <div class="container">
 
-        <div class="section-header">
 
-            <h2>Momentos da ADSA IPÊ</h2>
+<!-- =========================
+     AVISOS
+========================= -->
+
+
+<section 
+    class="section"
+    id="avisos"
+>
+
+
+    <div class="section-title">
+
+
+        <h2>
+            Avisos
+        </h2>
+
+
+        <p>
+            Fique por dentro das novidades da igreja.
+        </p>
+
+
+    </div>
+
+
+
+
+
+    <div 
+        class="grid grid-3"
+        id="avisos-container"
+    >
+
+
+        <!--
+            Os avisos serão carregados
+            futuramente pelo painel administrativo
+            em tempo real.
+        -->
+
+
+
+        <article class="card">
+
+
+            <h3>
+                Culto de Celebração
+            </h3>
+
+
 
             <p>
-                Acompanhe nossos cultos, eventos e atividades.
+
+                Participe conosco neste domingo
+                às 19h.
+
             </p>
 
-        </div>
 
-        <div class="instagram-grid" id="instagramFeed">
-
-            <!-- Carregado pelo JavaScript -->
-
-        </div>
-
-    </div>
-
-</section>
+        </article>
 
 
 
 
 
-<!-- ==========================================================
-TRANSMISSÃO AO VIVO
-=========================================================== -->
-
-<section class="live-section">
-
-    <div class="container">
-
-        <div class="live-wrapper">
-
-            <div class="live-info">
-
-                <span class="live-badge">
-
-                    <span class="live-dot"></span>
-
-                    AO VIVO
-
-                </span>
-
-                <h2 class="live-title">
-
-                    Assista nossos cultos ao vivo.
-
-                </h2>
-
-                <p class="live-description">
-
-                    Participe das transmissões diretamente pelo
-                    site da ADSA IPÊ com qualidade e estabilidade.
-
-                </p>
-
-                <a href="transmissao.html" class="btn-primary">
-
-                    Assistir agora
-
-                </a>
-
-            </div>
-
-            <div class="live-player">
-
-                <!-- Player incorporado futuramente -->
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+        <article class="card">
 
 
+            <h3>
+                Reunião de Jovens
+            </h3>
 
 
-
-<!-- ==========================================================
-PRÓXIMOS EVENTOS
-=========================================================== -->
-
-<section class="events-section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <h2>Próximos Eventos</h2>
 
             <p>
-                Fique por dentro da programação da igreja.
+
+                Encontro especial dos jovens
+                nesta semana.
+
             </p>
 
-        </div>
 
-        <div class="grid">
+        </article>
 
-            <article class="card event-card">
 
-                <div class="event-date">
 
-                    <span>12</span>
 
-                    <small>AGO</small>
 
-                </div>
+        <article class="card">
 
-                <div class="card-content">
 
-                    <h3 class="card-title">
+            <h3>
+                Novo aviso
+            </h3>
 
-                        Culto de Domingo
 
-                    </h3>
-
-                    <p class="card-text">
-
-                        Domingo às 18h30.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-            <article class="card event-card">
-
-                <div class="event-date">
-
-                    <span>16</span>
-
-                    <small>AGO</small>
-
-                </div>
-
-                <div class="card-content">
-
-                    <h3 class="card-title">
-
-                        Culto de Ensino
-
-                    </h3>
-
-                    <p class="card-text">
-
-                        Quinta-feira às 19h30.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-            <article class="card event-card">
-
-                <div class="event-date">
-
-                    <span>21</span>
-
-                    <small>AGO</small>
-
-                </div>
-
-                <div class="card-content">
-
-                    <h3 class="card-title">
-
-                        Congresso de Jovens
-
-                    </h3>
-
-                    <p class="card-text">
-
-                        Programação especial.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-
-
-<!-- ==========================================================
-ESTATÍSTICAS
-=========================================================== -->
-
-<section class="stats">
-
-    <div class="container">
-
-        <div class="stats-grid">
-
-            <div class="stat">
-
-                <h3>20+</h3>
-
-                <p>Anos de Ministério</p>
-
-            </div>
-
-            <div class="stat">
-
-                <h3>500+</h3>
-
-                <p>Membros</p>
-
-            </div>
-
-            <div class="stat">
-
-                <h3>100+</h3>
-
-                <p>Eventos Realizados</p>
-
-            </div>
-
-            <div class="stat">
-
-                <h3>1000+</h3>
-
-                <p>Vidas Impactadas</p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-
-
-<!-- ==========================================================
-MINISTÉRIOS
-=========================================================== -->
-
-<section class="ministries-section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <h2>Nossos Ministérios</h2>
 
             <p>
-                Conheça as áreas de atuação da igreja.
+
+                Em breve novos comunicados
+                serão publicados.
+
             </p>
 
-        </div>
 
-        <div class="grid">
+        </article>
 
-            <article class="card ministry-card">
-
-                <div class="ministry-icon">🎵</div>
-
-                <h3 class="ministry-title">
-
-                    Louvor
-
-                </h3>
-
-                <p class="ministry-description">
-
-                    Ministério de adoração.
-
-                </p>
-
-            </article>
-
-            <article class="card ministry-card">
-
-                <div class="ministry-icon">🙏</div>
-
-                <h3 class="ministry-title">
-
-                    Intercessão
-
-                </h3>
-
-                <p class="ministry-description">
-
-                    Oração pela igreja e pela comunidade.
-
-                </p>
-
-            </article>
-
-            <article class="card ministry-card">
-
-                <div class="ministry-icon">👨‍👩‍👧</div>
-
-                <h3 class="ministry-title">
-
-                    Família
-
-                </h3>
-
-                <p class="ministry-description">
-
-                    Fortalecendo famílias pela Palavra.
-
-                </p>
-
-            </article>
-
-        </div>
 
     </div>
 
+
 </section>
 
-<!-- Área de recursos -->
-        <section class="features" id="recursos">
 
-            <div class="feature-card">
-                <div class="icon">
-                    📡
-                </div>
 
-                <h3>Transmissões ao vivo</h3>
 
-                <p>
-                    Acompanhe cultos, eventos e transmissões
-                    em tempo real com qualidade.
-                </p>
+
+<!-- =========================
+     RECURSOS
+========================= -->
+
+
+<section class="features section">
+
+
+    <div class="section-title">
+
+
+        <h2>
+            Recursos
+        </h2>
+
+
+        <p>
+            Tudo em um só lugar.
+        </p>
+
+
+    </div>
+
+
+
+
+
+    <div class="grid grid-4">
+
+
+
+        <div class="card feature-card">
+
+
+            <div class="icon">
+                📡
             </div>
 
 
-            <div class="feature-card">
-                <div class="icon">
-                    📅
-                </div>
+            <h3>
+                Transmissões
+            </h3>
 
-                <h3>Agenda da igreja</h3>
 
-                <p>
-                    Veja todos os eventos, cultos e programações.
-                </p>
+            <p>
+                Acompanhe cultos ao vivo.
+            </p>
+
+
+        </div>
+
+
+
+
+
+        <div class="card feature-card">
+
+
+            <div class="icon">
+                📅
             </div>
 
 
-            <div class="feature-card">
-                <div class="icon">
-                    👥
-                </div>
+            <h3>
+                Eventos
+            </h3>
 
-                <h3>Área dos membros</h3>
 
-                <p>
-                    Tenha acesso a conteúdos exclusivos
-                    para membros cadastrados.
-                </p>
+            <p>
+                Veja a agenda da igreja.
+            </p>
+
+
+        </div>
+
+
+
+
+
+        <div class="card feature-card">
+
+
+            <div class="icon">
+                👥
             </div>
 
 
-            <div class="feature-card">
-                <div class="icon">
-                    ⚙️
-                </div>
-
-                <h3>Personalização</h3>
-
-                <p>
-                    Configure tema, acessibilidade e
-                    preferências da plataforma.
-                </p>
-            </div>
-
-        </section>
+            <h3>
+                Ministérios
+            </h3>
 
 
-        <!-- Área de acesso -->
-
-        <section class="access" id="login">
-
-            <div class="access-box">
-
-                <h2>
-                    Acesse sua conta
-                </h2>
+            <p>
+                Conheça nossos ministérios.
+            </p>
 
 
-                <p>
-                    Entre para acessar recursos exclusivos.
-                </p>
-
-
-                <form id="loginForm">
-
-
-                    <div class="input-group">
-
-                        <label>
-                            Email
-                        </label>
-
-                        <input 
-                            type="email"
-                            id="email"
-                            placeholder="Digite seu email"
-                            required
-                        >
-
-                    </div>
+        </div>
 
 
 
-                    <div class="input-group">
-
-                        <label>
-                            Senha
-                        </label>
-
-                        <input 
-                            type="password"
-                            id="password"
-                            placeholder="Digite sua senha"
-                            required
-                        >
-
-                    </div>
 
 
-
-                    <button 
-                        type="submit"
-                        class="btn-login">
-
-                        Entrar
-
-                    </button>
+        <div class="card feature-card">
 
 
-                </form>
-
-
-                <div class="extra-links">
-
-                    <a href="#">
-                        Esqueci minha senha
-                    </a>
-
-
-                    <a href="#">
-                        Criar conta
-                    </a>
-
-                </div>
-
-
+            <div class="icon">
+                ⚙️
             </div>
 
 
-        </section>
+            <h3>
+                Área do membro
+            </h3>
+
+
+            <p>
+                Conteúdos exclusivos.
+            </p>
+
+
+        </div>
 
 
 
-        <!-- Rodapé -->
-
-        <footer>
-
-            <div class="footer-content">
-
-                <h3>
-                    ADSA IPÊ
-                </h3>
+    </div>
 
 
-                <p>
-                    Uma plataforma digital para conectar
-                    pessoas, membros e visitantes.
-                </p>
+</section>
+
+<!-- =========================
+     ÁREA DE LOGIN
+========================= -->
 
 
-                <div class="social-links">
-
-                    <a href="#">
-                        YouTube
-                    </a>
+<section class="access section">
 
 
-                    <a href="#">
-                        Instagram
-                    </a>
+    <div class="login-box">
 
 
-                    <a href="#">
-                        Facebook
-                    </a>
-
-                </div>
+        <h2>
+            Acesse sua conta
+        </h2>
 
 
-            </div>
+
+        <p>
+            Entre para acessar recursos exclusivos.
+        </p>
 
 
-            <div class="copyright">
 
-                © 2026 ADSA IPÊ. Todos os direitos reservados.
+
+
+        <form id="loginForm">
+
+
+
+            <div class="form-group">
+
+
+                <label for="email">
+                    Email
+                </label>
+
+
+
+                <input 
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Digite seu email"
+                    required
+                >
+
 
             </div>
 
 
-        </footer>
-
-
-    </main>
 
 
 
-    <script src="script.js"></script>
+            <div class="form-group">
+
+
+                <label for="password">
+                    Senha
+                </label>
+
+
+
+                <input 
+                    type="password"
+                    id="password"
+                    class="form-control"
+                    placeholder="Digite sua senha"
+                    required
+                >
+
+
+            </div>
+
+
+
+
+
+            <button 
+                type="submit"
+                class="btn"
+            >
+
+                Entrar
+
+            </button>
+
+
+
+
+        </form>
+
+
+
+
+
+        <div class="extra-links">
+
+
+            <a href="#">
+                Esqueci minha senha
+            </a>
+
+
+
+            <a href="#">
+                Criar conta
+            </a>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+
+<footer>
+
+
+
+    <div class="footer-content">
+
+
+
+        <h3>
+            ADSA IPÊ
+        </h3>
+
+
+
+
+        <p>
+
+            Uma plataforma digital para conectar
+            pessoas, membros e visitantes.
+
+        </p>
+
+
+
+
+        <div class="social-links">
+
+
+            <a href="#">
+                YouTube
+            </a>
+
+
+            <a href="#">
+                Instagram
+            </a>
+
+
+            <a href="#">
+                Facebook
+            </a>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <div class="copyright">
+
+
+        © 2026 ADSA IPÊ.
+        Todos os direitos reservados.
+
+
+    </div>
+
+
+
+
+</footer>
+
+
+
+
+
+
+
+<!-- JAVASCRIPT -->
+
+
+<script src="js/script.js"></script>
+
 
 
 </body>
