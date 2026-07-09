@@ -1,0 +1,344 @@
+/* ================================
+   COMPONENTS CSS
+   Elementos reutilizáveis
+================================ */
+
+
+/* ================================
+   BOTÕES
+================================ */
+
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 12px 28px;
+
+    border-radius: var(--radius-md);
+
+    border: none;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-weight: 700;
+
+    font-size: 16px;
+
+    transition: var(--transition-normal);
+
+    cursor: pointer;
+
+}
+
+
+
+.btn:hover {
+
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+
+}
+
+
+
+.btn-secondary {
+
+    background: var(--secondary);
+
+}
+
+
+
+.btn-secondary:hover {
+
+    opacity: .9;
+
+}
+
+
+
+.btn-outline {
+
+    background: transparent;
+
+    color: var(--primary);
+
+    border: 2px solid var(--primary);
+
+}
+
+
+
+.btn-outline:hover {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+
+
+/* ================================
+   CARDS
+================================ */
+
+
+.card {
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    padding: 30px;
+
+    box-shadow: var(--shadow-md);
+
+    transition: var(--transition-normal);
+
+}
+
+
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+
+/* CARD DE RECURSOS */
+
+.feature-card {
+
+    text-align: center;
+
+}
+
+
+
+.feature-card .icon {
+
+    font-size: 40px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.feature-card h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+
+}
+
+
+
+.feature-card p {
+
+    color: var(--text-secondary);
+
+}
+
+
+
+/* ================================
+   INPUTS / FORMULÁRIOS
+================================ */
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.form-group label {
+
+    font-weight: 600;
+
+    color: var(--text);
+
+}
+
+
+
+.form-control {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border-radius: var(--radius-md);
+
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    outline: none;
+
+    transition: var(--transition-normal);
+
+}
+
+
+
+.form-control:focus {
+
+    border-color: var(--primary);
+
+    box-shadow:
+    0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+
+
+/* ================================
+   CAIXA DE LOGIN
+================================ */
+
+
+.login-box {
+
+    max-width: 450px;
+
+    width: 100%;
+
+    background: var(--surface);
+
+    padding: 40px;
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-lg);
+
+    border: 1px solid var(--border);
+
+}
+
+
+
+.login-box h2 {
+
+    text-align: center;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.login-box p {
+
+    text-align: center;
+
+    color: var(--text-secondary);
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/* ================================
+   BADGES / ETIQUETAS
+================================ */
+
+
+.badge {
+
+    display: inline-flex;
+
+    padding: 6px 12px;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+
+.badge-success {
+
+    background: #dcfce7;
+
+    color: #166534;
+
+}
+
+
+
+.badge-warning {
+
+    background: #fef3c7;
+
+    color: #92400e;
+
+}
+
+
+
+/* ================================
+   ALERTAS
+================================ */
+
+
+.alert {
+
+    padding: 15px 20px;
+
+    border-radius: var(--radius-md);
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.alert-success {
+
+    background: #dcfce7;
+
+    color: #166534;
+
+}
+
+
+
+.alert-danger {
+
+    background: #fee2e2;
+
+    color: #991b1b;
+
+}

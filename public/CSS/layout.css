@@ -1,0 +1,426 @@
+/* =======================================================
+   ADSA IPÊ SYSTEM
+   LAYOUT
+======================================================= */
+
+
+/* ===============================
+   HEADER
+================================ */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:80px;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(13,71,161,.82);
+
+    z-index:9999;
+
+    transition:.35s;
+
+}
+
+
+.header-container{
+
+    width:min(95%,1400px);
+
+    height:100%;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+
+
+/* ===============================
+   LOGO
+================================ */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-left: -20;
+    
+    gap:14px;
+
+}
+
+.logo img{
+
+    width:100px;
+
+}
+
+.logo h1{
+
+    color:white;
+
+    font-size:1.4rem;
+
+    font-weight:800;
+
+}
+
+
+
+
+/* ===============================
+   MENU
+================================ */
+
+.navigation{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:36px;
+
+}
+
+
+
+.navigation a{
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.25s;
+
+    position:relative;
+
+}
+
+
+
+.navigation a:hover{
+
+    color:#00C2FF;
+
+}
+
+
+
+.navigation a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-6px;
+
+    left:0;
+
+    width:0;
+
+    height:2px;
+
+    background:#00C2FF;
+
+    transition:.3s;
+
+}
+
+
+
+.navigation a:hover::after{
+
+    width:100%;
+
+}
+
+
+
+
+/* ===============================
+   BOTÕES HEADER
+================================ */
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+
+
+
+/* ===============================
+   HERO
+================================ */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+
+.hero-content{
+
+    width:min(90%,900px);
+
+    text-align:center;
+
+    z-index:5;
+
+}
+
+
+
+
+.hero-content h1{
+
+    font-size:4rem;
+
+    font-weight:900;
+
+    line-height:1.1;
+
+}
+
+
+
+
+.hero-content p{
+
+    margin-top:25px;
+
+    font-size:1.2rem;
+
+    color:var(--text-light);
+
+}
+
+
+
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:40px;
+
+}
+
+
+
+
+/* ===============================
+   SEÇÕES
+================================ */
+
+section{
+
+    padding:120px 0;
+
+}
+
+
+
+
+.section-title{
+
+    text-align:center;
+
+    font-size:2.8rem;
+
+    margin-bottom:60px;
+
+}
+
+
+
+
+/* ===============================
+   GRID
+================================ */
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:50px;
+
+}
+
+
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+
+
+.grid-4{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+
+
+
+/* ===============================
+   CARDS
+================================ */
+
+.card{
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-md);
+
+    transition:.35s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-xl);
+
+}
+
+
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+.footer{
+
+    padding:70px 0;
+
+    background:#081F4D;
+
+    color:white;
+
+}
+
+
+
+
+.footer-container{
+
+    width:min(95%,1400px);
+
+    margin:auto;
+
+}
+
+
+
+
+/* ===============================
+   ESPAÇADORES
+================================ */
+
+.mt-1{
+
+    margin-top:20px;
+
+}
+
+.mt-2{
+
+    margin-top:40px;
+
+}
+
+.mt-3{
+
+    margin-top:60px;
+
+}
+
+.mt-4{
+
+    margin-top:80px;
+
+}
+
+
+
+
+/* ===============================
+   UTILITÁRIOS
+================================ */
+
+.center{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}

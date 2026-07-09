@@ -1,0 +1,462 @@
+/* ==========================================================
+   ADSA IPÊ SYSTEM
+   ANIMATIONS
+========================================================== */
+
+
+/* ==========================================
+   TRANSIÇÕES GLOBAIS
+========================================== */
+
+*{
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease,
+        opacity .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+
+
+/* ==========================================
+   FADE IN
+========================================== */
+
+.fade-in{
+
+    animation:fadeIn .8s ease forwards;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+
+/* ==========================================
+   SLIDE UP
+========================================== */
+
+.slide-up{
+
+    animation:slideUp .8s ease forwards;
+
+}
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+/* ==========================================
+   SLIDE LEFT
+========================================== */
+
+.slide-left{
+
+    animation:slideLeft .8s ease forwards;
+
+}
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+
+
+/* ==========================================
+   SLIDE RIGHT
+========================================== */
+
+.slide-right{
+
+    animation:slideRight .8s ease forwards;
+
+}
+
+@keyframes slideRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+
+
+/* ==========================================
+   ZOOM
+========================================== */
+
+.zoom{
+
+    animation:zoom .8s ease forwards;
+
+}
+
+@keyframes zoom{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+/* ==========================================
+   FLOAT
+========================================== */
+
+.float{
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+/* ==========================================
+   PULSE
+========================================== */
+
+.pulse{
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.card{
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+
+
+
+/* ==========================================
+   IMAGENS
+========================================== */
+
+img{
+
+    transition:.5s;
+
+}
+
+img:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+
+
+/* ==========================================
+   MENU
+========================================== */
+
+.navigation a{
+
+    transition:.25s;
+
+}
+
+
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero h1{
+
+    animation:slideUp .9s ease;
+
+}
+
+.hero p{
+
+    animation:fadeIn 1.2s ease;
+
+}
+
+.hero-buttons{
+
+    animation:zoom 1.3s ease;
+
+}
+
+
+
+
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+
+/* ==========================================
+   LOADER
+========================================== */
+
+.page-loader{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:white;
+
+    z-index:999999;
+
+}
+
+
+
+
+/* ==========================================
+   SPINNER
+========================================== */
+
+.spinner{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    border:6px solid #ddd;
+
+    border-top-color:var(--primary);
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+
+
+/* ==========================================
+   HOVER LINKS
+========================================== */
+
+a:hover{
+
+    opacity:.9;
+
+}
+
+
+
+
+/* ==========================================
+   SCROLL INDICATOR
+========================================== */
+
+.scroll-indicator{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:0;
+
+    height:4px;
+
+    background:var(--secondary);
+
+    z-index:999999;
+
+}

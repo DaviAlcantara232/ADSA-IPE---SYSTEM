@@ -1,0 +1,164 @@
+/* ================================
+   DESIGN SYSTEM
+   Identidade visual global
+================================ */
+
+
+
+:root {
+
+    /* CORES PRINCIPAIS */
+
+    --primary: #2563eb;
+
+    --primary-dark: #1d4ed8;
+
+    --secondary: #0f172a;
+
+
+    /* CORES DE FUNDO */
+
+    --background: #f8fafc;
+
+    --surface: #ffffff;
+
+    --surface-hover: #f1f5f9;
+
+
+
+    /* TEXTOS */
+
+    --text: #111827;
+
+    --text-secondary: #64748b;
+
+    --text-light: #94a3b8;
+
+
+
+    /* BORDAS */
+
+    --border: #e2e8f0;
+
+
+
+    /* ESTADOS */
+
+    --success: #16a34a;
+
+    --warning: #f59e0b;
+
+    --danger: #dc2626;
+
+
+
+    /* SOMBRAS */
+
+    --shadow-sm:
+    0 2px 8px rgba(0,0,0,0.05);
+
+
+    --shadow-md:
+    0 10px 25px rgba(0,0,0,0.08);
+
+
+    --shadow-lg:
+    0 20px 40px rgba(0,0,0,0.12);
+
+
+
+    /* BORDAS ARREDONDADAS */
+
+    --radius-sm: 8px;
+
+    --radius-md: 12px;
+
+    --radius-lg: 20px;
+
+
+
+    /* TRANSIÇÕES */
+
+    --transition-fast: .2s ease;
+
+    --transition-normal: .3s ease;
+
+
+
+    /* LARGURA DO SITE */
+
+    --container-width: 1200px;
+
+
+    /* FONTES */
+
+    --font-primary:
+    "Inter", Arial, sans-serif;
+
+}
+
+
+
+/* ================================
+   TEMA ESCURO
+================================ */
+
+
+.dark-theme {
+
+    --background: #020617;
+
+    --surface: #0f172a;
+
+    --surface-hover: #1e293b;
+
+
+    --text: #f8fafc;
+
+    --text-secondary: #cbd5e1;
+
+    --text-light: #94a3b8;
+
+
+    --border: #334155;
+
+
+    --shadow-md:
+    0 10px 25px rgba(0,0,0,0.4);
+
+}
+
+
+
+/* ================================
+   PADRÕES GLOBAIS
+================================ */
+
+
+body {
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: var(--font-primary);
+
+    transition:
+    background var(--transition-normal),
+    color var(--transition-normal);
+
+}
+
+
+
+.container {
+
+    width: 100%;
+
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+
+    padding: 0 25px;
+
+}

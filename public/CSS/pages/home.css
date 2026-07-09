@@ -1,0 +1,1367 @@
+/* ==========================================================
+   ADSA IPÊ SYSTEM
+   HOME PAGE
+   Parte 1
+==========================================================*/
+
+
+/* ===============================
+   BODY
+================================ */
+
+body{
+
+    background:#F4F7FC;
+
+}
+
+
+
+
+/* ===============================
+   HEADER
+================================ */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:82px;
+
+    background:linear-gradient(
+        90deg,
+        #061C45,
+        #0D47A1,
+        #1976D2
+    );
+
+    backdrop-filter:blur(18px);
+
+    display:flex;
+
+    align-items:center;
+
+    z-index:99999;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.18);
+
+}
+
+
+
+.header-container{
+
+    width:min(94%,1400px);
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+
+/* ===============================
+   LOGO
+================================ */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+
+.logo img{
+
+    width:115px;
+
+}
+
+
+
+.logo h1{
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:800;
+
+}
+
+
+
+
+/* ===============================
+   MENU
+================================ */
+
+.navigation{
+
+    display:flex;
+
+    gap:34px;
+
+}
+
+
+
+.navigation a{
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+
+
+.navigation a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#00D4FF;
+
+    transition:.3s;
+
+}
+
+
+
+.navigation a:hover{
+
+    color:#9EE8FF;
+
+}
+
+
+
+.navigation a:hover::after{
+
+    width:100%;
+
+}
+
+
+
+
+/* ===============================
+   HERO
+================================ */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding-top:90px;
+
+    background:
+    linear-gradient(
+        rgba(5,20,55,.70),
+        rgba(5,20,55,.82)
+    ),
+    url("../images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+    color:white;
+
+}
+
+
+
+.hero-content{
+
+    max-width:900px;
+
+}
+
+
+
+.hero h1{
+
+    font-size:64px;
+
+    font-weight:900;
+
+    margin-bottom:30px;
+
+    line-height:1.1;
+
+}
+
+
+
+.hero p{
+
+    font-size:22px;
+
+    opacity:.95;
+
+    margin-bottom:45px;
+
+}
+
+
+
+
+/* ===============================
+   BOTÕES
+================================ */
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+}
+
+
+
+.btn-primary{
+
+    padding:16px 34px;
+
+    border-radius:999px;
+
+    background:#00B8FF;
+
+    color:white;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 30px rgba(0,184,255,.35);
+
+}
+
+
+
+.btn-outline{
+
+    padding:16px 34px;
+
+    border-radius:999px;
+
+    border:2px solid white;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+
+
+.btn-outline:hover{
+
+    background:white;
+
+    color:#0D47A1;
+
+}
+
+
+
+
+/* ===============================
+   PRIMEIRA SEÇÃO
+================================ */
+
+.instagram-section{
+
+    padding:110px 0;
+
+    background:white;
+
+}
+
+
+
+.instagram-section h2{
+
+    font-size:42px;
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.instagram-section p{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:50px;
+
+}
+
+
+
+
+/* ===============================
+   CARROSSEL
+================================ */
+
+.carousel{
+
+    width:100%;
+
+    min-height:320px;
+
+    border-radius:25px;
+
+    background:#EEF3FA;
+
+    border:2px dashed #CBD5E1;
+
+}
+
+/* ==========================================================
+   HOME PAGE
+   Parte 2
+==========================================================*/
+
+
+/* ===============================
+   SEÇÕES
+================================ */
+
+.section{
+
+    padding:120px 0;
+
+}
+
+
+
+.section-title{
+
+    font-size:46px;
+
+    font-weight:800;
+
+    text-align:center;
+
+    color:#0B1F3A;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.section-subtitle{
+
+    text-align:center;
+
+    color:#6B7280;
+
+    font-size:18px;
+
+    margin-bottom:70px;
+
+}
+
+
+
+
+/* ===============================
+   GRID
+================================ */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+
+
+
+/* ===============================
+   CARD PREMIUM
+================================ */
+
+.card{
+
+    background:white;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+        0 15px 45px rgba(0,0,0,.08);
+
+    transition:.45s;
+
+    position:relative;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+
+        0 30px 60px rgba(13,71,161,.20);
+
+}
+
+
+
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        #00B8FF,
+
+        #1565C0,
+
+        #0B1F3A
+
+    );
+
+}
+
+
+
+
+.card-image{
+
+    height:240px;
+
+    overflow:hidden;
+
+}
+
+
+
+.card-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+
+
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+.card-content{
+
+    padding:35px;
+
+}
+
+
+
+.card-title{
+
+    font-size:28px;
+
+    color:#0B1F3A;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.card-text{
+
+    color:#6B7280;
+
+    line-height:1.8;
+
+}
+
+
+
+
+/* ===============================
+   BOTÃO DO CARD
+================================ */
+
+.card-button{
+
+    margin-top:30px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#1565C0;
+
+    font-weight:700;
+
+}
+
+
+
+.card-button:hover{
+
+    gap:18px;
+
+}
+
+
+
+
+/* ===============================
+   AO VIVO
+================================ */
+
+.live-section{
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #061C45,
+
+        #0B1F3A,
+
+        #1565C0
+
+    );
+
+    color:white;
+
+}
+
+
+
+.live-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+
+
+
+.live-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:#E53935;
+
+    padding:12px 24px;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+.live-dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:white;
+
+    animation:livePulse 1.2s infinite;
+
+}
+
+
+
+@keyframes livePulse{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(2.4);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+
+.live-title{
+
+    font-size:50px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.live-description{
+
+    font-size:19px;
+
+    line-height:1.9;
+
+    opacity:.92;
+
+}
+
+
+
+
+.live-player{
+
+    background:#021226;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    min-height:360px;
+
+    box-shadow:
+
+        0 20px 60px rgba(0,0,0,.45);
+
+}
+
+
+
+
+/* ===============================
+   EVENTOS
+================================ */
+
+.events{
+
+    background:#F6F9FC;
+
+}
+
+
+
+
+.event-card{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    transition:.35s;
+
+}
+
+
+
+.event-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+
+.event-date{
+
+    width:85px;
+
+    height:85px;
+
+    border-radius:22px;
+
+    background:#1565C0;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+/* ===============================
+   MINISTÉRIOS
+================================ */
+
+.ministry-card{
+
+    text-align:center;
+
+    padding:45px 35px;
+
+}
+
+
+
+.ministry-icon{
+
+    width:95px;
+
+    height:95px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #0D47A1,
+
+        #42A5F5
+
+    );
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:36px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+.ministry-title{
+
+    font-size:26px;
+
+    color:#0B1F3A;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+.ministry-description{
+
+    color:#6B7280;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+   HOME PAGE
+   Parte 3
+==========================================================*/
+
+
+/* ===============================
+   INSTAGRAM
+================================ */
+
+.instagram-feed{
+
+    background:#ffffff;
+
+    padding:120px 0;
+
+}
+
+
+
+.instagram-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+
+
+.instagram-header h2{
+
+    font-size:48px;
+
+    color:#0B1F3A;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.instagram-header p{
+
+    color:#64748B;
+
+    font-size:18px;
+
+}
+
+
+
+
+/* ===============================
+   GRID INSTAGRAM
+================================ */
+
+.instagram-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.instagram-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    background:#ECEFF5;
+
+    aspect-ratio:1/1;
+
+    cursor:pointer;
+
+    transition:.45s;
+
+}
+
+
+
+.instagram-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+
+.instagram-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(0,0,0,0),
+
+        rgba(0,0,0,.70)
+
+    );
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+
+
+.instagram-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.instagram-card:hover::before{
+
+    opacity:1;
+
+}
+
+
+
+.instagram-card span{
+
+    position:absolute;
+
+    bottom:20px;
+
+    left:20px;
+
+    color:white;
+
+    font-weight:700;
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+
+
+.instagram-card:hover span{
+
+    opacity:1;
+
+}
+
+
+
+
+/* ===============================
+   ESTATÍSTICAS
+================================ */
+
+.stats{
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #051937,
+
+        #0D47A1,
+
+        #1976D2
+
+    );
+
+    color:white;
+
+    padding:120px 0;
+
+}
+
+
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:40px;
+
+}
+
+
+
+.stat{
+
+    text-align:center;
+
+}
+
+
+
+.stat h3{
+
+    font-size:58px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.stat p{
+
+    opacity:.9;
+
+    font-size:18px;
+
+}
+
+
+
+
+/* ===============================
+   MAPA
+================================ */
+
+.location{
+
+    padding:120px 0;
+
+    background:#F5F7FB;
+
+}
+
+
+
+.map{
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    min-height:500px;
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.12);
+
+}
+
+
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+.footer{
+
+    background:#061C45;
+
+    color:white;
+
+    padding:90px 0 40px;
+
+}
+
+
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:45px;
+
+}
+
+
+
+.footer h4{
+
+    margin-bottom:25px;
+
+    font-size:22px;
+
+}
+
+
+
+.footer p{
+
+    opacity:.85;
+
+    line-height:1.9;
+
+}
+
+
+
+.footer ul{
+
+    list-style:none;
+
+}
+
+
+
+.footer li{
+
+    margin-bottom:14px;
+
+}
+
+
+
+.footer a{
+
+    color:white;
+
+    opacity:.8;
+
+    transition:.3s;
+
+}
+
+
+
+.footer a:hover{
+
+    opacity:1;
+
+    padding-left:10px;
+
+}
+
+
+
+
+/* ===============================
+   COPYRIGHT
+================================ */
+
+.copyright{
+
+    margin-top:70px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    padding-top:35px;
+
+    text-align:center;
+
+    opacity:.7;
+
+}
+
+
+
+
+/* ===============================
+   WHATSAPP
+================================ */
+
+.whatsapp{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:68px;
+
+    height:68px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:32px;
+
+    box-shadow:
+
+        0 18px 35px rgba(37,211,102,.35);
+
+    z-index:9999;
+
+    transition:.35s;
+
+}
+
+
+
+.whatsapp:hover{
+
+    transform:scale(1.12);
+
+}
+
+
+
+
+/* ===============================
+   BOTÃO TOPO
+================================ */
+
+.back-top{
+
+    position:fixed;
+
+    right:35px;
+
+    bottom:120px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:#0D47A1;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+}
+
+
+
+.back-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}

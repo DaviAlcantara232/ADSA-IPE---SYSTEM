@@ -1,0 +1,107 @@
+/* ================================
+   RESET CSS
+   Remove padrões do navegador
+================================ */
+
+
+*,
+*::before,
+*::after {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    font-size: 16px;
+
+}
+
+
+
+body {
+
+    min-height: 100vh;
+
+    line-height: 1.5;
+
+    -webkit-font-smoothing: antialiased;
+
+    text-rendering: optimizeLegibility;
+
+}
+
+
+
+img,
+picture,
+video,
+canvas,
+svg {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+
+
+input,
+button,
+textarea,
+select {
+
+    font: inherit;
+
+}
+
+
+
+button {
+
+    cursor: pointer;
+
+}
+
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+
+ul,
+ol {
+
+    list-style: none;
+
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+
+    overflow-wrap: break-word;
+
+}
