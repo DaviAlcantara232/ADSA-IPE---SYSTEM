@@ -1,24 +1,19 @@
 /* ==========================================
    ADSA IPÊ
-   RESPONSIVE CSS COMPLETO
+   RESPONSIVE DESIGN
 ========================================== */
 
 
 /* ==========================================
-   DESKTOP GRANDE
+   CONFIGURAÇÕES GERAIS
 ========================================== */
 
-@media (min-width: 1200px) {
 
+img {
 
-    .container {
+    max-width: 100%;
 
-        width: min(100% - 60px, 1200px);
-
-        margin: 0 auto;
-
-    }
-
+    height: auto;
 
 }
 
@@ -27,15 +22,17 @@
 
 
 /* ==========================================
-   NOTEBOOKS
+   TABLETS E NOTEBOOKS MENORES
 ========================================== */
 
-@media (max-width: 1200px) {
+
+@media (max-width: 1024px) {
 
 
-    .navbar {
 
-        padding: 20px 30px;
+    .header-container {
+
+        padding: 0 25px;
 
     }
 
@@ -43,66 +40,23 @@
 
     .logo img {
 
-        width: 180px;
+        width: 150px;
 
     }
 
 
 
-    .nav-links {
+    .navigation {
 
-        gap: 18px;
-
-    }
-
-
-
-    .hero {
-
-        padding: 60px 30px;
-
-    }
-
-
-}
-
-
-
-
-
-
-
-/* ==========================================
-   TABLETS
-========================================== */
-
-@media (max-width: 1024px) {
-
-
-    .hero {
-
-
-        flex-direction: column;
-
-        text-align: center;
+        gap: 20px;
 
     }
 
 
 
-    .hero-content {
+    .navigation a {
 
-        max-width: 700px;
-
-    }
-
-
-
-    .grid-4 {
-
-
-        grid-template-columns: repeat(2, 1fr);
-
+        font-size: 15px;
 
     }
 
@@ -117,8 +71,19 @@
 
 
 /* ==========================================
-   CELULAR / TABLET PEQUENO
+   CELULAR E TABLET PEQUENO
 ========================================== */
+
+
+.menu-toggle {
+
+    display: none;
+
+}
+
+
+
+
 
 @media (max-width: 768px) {
 
@@ -127,17 +92,29 @@
     /* HEADER */
 
 
-    .navbar {
-
-        position: relative;
+    .header-container {
 
         display: flex;
 
+        align-items: center;
+
         justify-content: space-between;
+
+        position: relative;
+
+    }
+
+
+
+
+
+    .logo {
+
+        display: flex;
 
         align-items: center;
 
-        padding: 15px 20px;
+        gap: 10px;
 
     }
 
@@ -146,9 +123,16 @@
 
     .logo img {
 
+        width: 130px;
 
-        width: 150px;
+    }
 
+
+
+
+    .logo h1 {
+
+        font-size: 20px;
 
     }
 
@@ -156,7 +140,8 @@
 
 
 
-    /* BOTÃO 3 BARRAS */
+
+    /* BOTÃO TRÊS BARRAS */
 
 
     .menu-toggle {
@@ -164,37 +149,47 @@
 
         display: flex;
 
+
         flex-direction: column;
+
 
         justify-content: center;
 
+
         gap: 5px;
+
 
         width: 40px;
 
+
         height: 40px;
 
-        border: none;
 
         background: transparent;
 
+
+        border: none;
+
+
         cursor: pointer;
 
-        z-index: 2000;
+
+        z-index: 1001;
 
 
     }
 
 
 
+
     .menu-toggle span {
 
 
-        display: block;
+        width: 28px;
 
-        width: 30px;
 
         height: 3px;
+
 
         border-radius: 5px;
 
@@ -206,106 +201,86 @@
 
 
 
-    /* MENU ESCONDIDO */
+    /* MENU MOBILE */
 
 
-    .nav-links {
+    .navigation {
 
 
         position: absolute;
 
+
         top: 100%;
+
 
         left: 0;
 
+
         width: 100%;
+
+
+        display: none;
+
+
+        flex-direction: column;
+
+
+        align-items: center;
+
+
+        padding: 25px 0;
+
+
+        z-index: 1000;
+
+
+    }
+
+
+
+
+
+    .navigation.active {
 
 
         display: flex;
 
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 20px;
-
-
-        padding: 30px 20px;
-
-
-        transform: translateY(-150%);
-
-
-        transition: .3s ease;
-
-
-        z-index: 1500;
-
 
     }
 
 
 
 
-
-    /* MENU ABERTO */
-
-
-    .nav-links.active {
-
-
-        transform: translateY(0);
-
-
-    }
-
-
-
-
-
-    .nav-links li {
+    .navigation a {
 
 
         width: 100%;
+
 
         text-align: center;
 
-
-    }
-
-
-
-
-
-    .nav-links a {
-
-
-        display: block;
-
-        width: 100%;
 
         padding: 12px;
 
 
     }
 
+    /* ==========================================
+   HERO RESPONSIVO
+========================================== */
 
 
+@media (max-width: 768px) {
 
-
-
-    /* HERO */
 
 
     .hero {
 
-
         flex-direction: column;
 
+        text-align: center;
+
         padding: 40px 20px;
-
-        gap: 30px;
-
 
     }
 
@@ -313,9 +288,23 @@
 
     .hero h1 {
 
+        font-size: 32px;
 
-        font-size: clamp(28px, 7vw, 38px);
+    }
 
+
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+
+
+    .hero-image {
+
+        width: 100%;
 
     }
 
@@ -323,29 +312,19 @@
 
     .hero-image img {
 
-
         width: 100%;
-
-        max-width: 400px;
-
 
     }
 
 
 
-
-
-
-    /* BOTÕES */
-
-
     .hero-buttons {
 
+        display: flex;
 
         flex-direction: column;
 
-        width: 100%;
-
+        gap: 15px;
 
     }
 
@@ -353,43 +332,168 @@
 
     .hero-buttons .btn {
 
-
         width: 100%;
 
+    }
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   SEÇÕES
+========================================== */
+
+
+@media (max-width: 768px) {
+
+
+
+    .section {
+
+        padding: 40px 20px;
 
     }
 
 
 
+    .section-title h2 {
+
+        font-size: 28px;
+
+    }
+
+
+
+    .section-title p {
+
+        font-size: 15px;
+
+    }
+
+
+}
 
 
 
 
-    /* CARDS */
+
+
+
+/* ==========================================
+   CARDS
+========================================== */
+
+
+@media (max-width: 1024px) {
+
+
+
+    .grid-4 {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
 
 
     .grid-4,
 
     .grid-3 {
 
-
         grid-template-columns: 1fr;
-
 
     }
 
 
 
+    .card {
+
+        width: 100%;
+
+    }
 
 
-    /* SEÇÕES */
+}
 
 
-    .section {
 
 
-        padding: 50px 20px;
 
+
+
+/* ==========================================
+   FORMULÁRIOS
+========================================== */
+
+
+@media (max-width: 768px) {
+
+
+
+    input,
+
+    textarea,
+
+    select {
+
+        width: 100%;
+
+    }
+
+
+
+    .form-group {
+
+        width: 100%;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+
+@media (max-width: 768px) {
+
+
+
+    footer {
+
+        text-align: center;
+
+    }
+
+
+
+    .footer-content {
+
+        flex-direction: column;
+
+        gap: 20px;
 
     }
 
@@ -403,10 +507,10 @@
 
 
 
-
 /* ==========================================
    CELULARES PEQUENOS
 ========================================== */
+
 
 @media (max-width: 480px) {
 
@@ -414,31 +518,33 @@
 
     .logo img {
 
-
-        width: 125px;
-
+        width: 110px;
 
     }
 
+
+
+    .logo h1 {
+
+        font-size: 17px;
+
+    }
 
 
 
     .hero h1 {
 
-
         font-size: 26px;
-
 
     }
 
 
 
+    .btn {
 
-    .section-title h2 {
+        padding: 12px 18px;
 
-
-        font-size: 25px;
-
+        font-size: 14px;
 
     }
 
@@ -446,9 +552,7 @@
 
     .card {
 
-
         padding: 18px;
-
 
     }
 
@@ -466,16 +570,16 @@
    CELULAR DEITADO
 ========================================== */
 
+
 @media (max-height: 500px) and (orientation: landscape) {
 
 
-    .nav-links {
 
+    .navigation {
 
         max-height: 80vh;
 
         overflow-y: auto;
-
 
     }
 
