@@ -493,3 +493,105 @@ section {
 
 
 }
+
+/* ==========================================
+   CORREÇÃO MENU MOBILE - ADSA IPÊ
+========================================== */
+
+
+@media(max-width:768px){
+
+
+    .header-container{
+
+        position:relative;
+
+    }
+
+
+
+    .menu-toggle{
+
+        display:flex !important;
+
+        position:relative;
+
+        z-index:10000;
+
+    }
+
+
+
+
+    .navigation{
+
+        display:none !important;
+
+        position:absolute !important;
+
+        top:80px !important;
+
+        right:0 !important;
+
+        left:auto !important;
+
+        width:280px !important;
+
+        flex-direction:column !important;
+
+        align-items:center !important;
+
+        justify-content:flex-start !important;
+
+        gap:20px !important;
+
+        padding:25px !important;
+
+        background:#0D47A1 !important;
+
+        border-radius:0 0 0 20px;
+
+        z-index:9999 !important;
+
+    }
+
+
+
+
+    .navigation.active{
+
+        display:flex !important;
+
+    }
+
+
+
+
+
+    .navigation a{
+
+        width:100% !important;
+
+        text-align:center !important;
+
+        padding:12px 0 !important;
+
+    }
+
+
+
+
+    .header-actions{
+
+        display:flex !important;
+
+        flex-direction:column !important;
+
+        width:100% !important;
+
+        gap:15px !important;
+
+    }
+
+
+}
