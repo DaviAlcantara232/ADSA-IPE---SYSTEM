@@ -1,0 +1,368 @@
+/* =======================================================
+   ADSA IPÊ
+   TRANSMISSÃO PAGE CSS
+======================================================= */
+
+
+
+/* =======================================================
+   HERO
+======================================================= */
+
+
+.stream-hero {
+
+    min-height:100vh;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background-image:url("../assets/images/transmissao-hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+
+.stream-hero-overlay {
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.7),
+        rgba(0,0,0,.45)
+    );
+
+}
+
+
+
+.stream-hero-content {
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+
+.stream-hero-content h1 {
+
+    font-size:4rem;
+
+    font-weight:900;
+
+    line-height:1.1;
+
+    margin:25px 0;
+
+}
+
+
+
+.stream-hero-content p {
+
+    font-size:1.2rem;
+
+    max-width:750px;
+
+    margin:auto;
+
+    color:#e5e7eb;
+
+}
+
+
+
+
+
+/* =======================================================
+   PLAYER AO VIVO
+======================================================= */
+
+
+.live-section {
+
+    padding:100px 0;
+
+}
+
+
+
+.live-player {
+
+    padding:30px;
+
+}
+
+
+
+.live-status {
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.live-dot {
+
+    width:12px;
+
+    height:12px;
+
+    background:#dc2626;
+
+    border-radius:50%;
+
+}
+
+
+
+.video-container {
+
+    width:100%;
+
+}
+
+
+
+.video-placeholder {
+
+    height:500px;
+
+    background:#020617;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:20px;
+
+}
+
+
+
+.video-placeholder span {
+
+    font-size:70px;
+
+}
+
+
+
+
+
+/* =======================================================
+   HORÁRIOS
+======================================================= */
+
+
+.stream-schedule {
+
+    padding:80px 0;
+
+}
+
+
+
+.schedule-card {
+
+    text-align:center;
+
+}
+
+
+
+.schedule-icon {
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+/* =======================================================
+   MENSAGENS
+======================================================= */
+
+
+.messages-section {
+
+    padding:100px 0;
+
+}
+
+
+
+.video-card {
+
+    text-align:center;
+
+}
+
+
+
+.video-thumb {
+
+    height:200px;
+
+    background:#0f172a;
+
+    border-radius:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.video-thumb span {
+
+    font-size:50px;
+
+}
+
+
+
+
+
+/* =======================================================
+   CONTATO
+======================================================= */
+
+
+.stream-contact {
+
+    padding:80px 0;
+
+}
+
+
+
+.contact-box {
+
+    text-align:center;
+
+    padding:60px;
+
+}
+
+
+
+
+
+/* =======================================================
+   CTA
+======================================================= */
+
+
+.stream-cta {
+
+    padding:100px 0;
+
+}
+
+
+
+.cta-box {
+
+    text-align:center;
+
+    padding:70px;
+
+}
+
+
+
+.cta-box h2 {
+
+    font-size:2.8rem;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+/* =======================================================
+   RESPONSIVO
+======================================================= */
+
+
+@media(max-width:768px){
+
+
+
+    .stream-hero-content h1 {
+
+        font-size:2.3rem;
+
+    }
+
+
+
+    .video-placeholder {
+
+        height:260px;
+
+    }
+
+
+
+    .contact-box,
+    .cta-box {
+
+        padding:35px 20px;
+
+    }
+
+
+
+}
