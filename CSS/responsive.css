@@ -1,12 +1,23 @@
 /* ==========================================
    ADSA IPÊ
-   RESPONSIVE DESIGN
+   RESPONSIVE CSS
 ========================================== */
 
 
 /* ==========================================
-   CONFIGURAÇÕES GERAIS
+   CORREÇÕES GERAIS
 ========================================== */
+
+html,
+body {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    overflow-x: hidden;
+
+}
 
 
 img {
@@ -19,382 +30,82 @@ img {
 
 
 
+.container {
+
+    width: min(95%, 1400px);
+
+    margin: 0 auto;
+
+}
+
+
+
 
 
 /* ==========================================
-   TABLETS E NOTEBOOKS MENORES
+   TABLETS E NOTEBOOKS
+========================================== */
+
+
+@media (max-width: 1200px) {
+
+
+    .container {
+
+        width: calc(100% - 40px);
+
+    }
+
+
+
+    .hero-content h1 {
+
+        font-size: 3rem;
+
+    }
+
+
+
+    .grid {
+
+        gap: 25px;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   TABLETS
 ========================================== */
 
 
 @media (max-width: 1024px) {
-
-
-
-    .header-container {
-
-        padding: 0 25px;
-
-    }
-
-
-
-    .logo img {
-
-        width: 150px;
-
-    }
-
-
-
-    .navigation {
-
-        gap: 20px;
-
-    }
-
-
-
-    .navigation a {
-
-        font-size: 15px;
-
-    }
-
-
-
-}
-
-
-
-
-
-
-
-/* ==========================================
-   CELULAR E TABLET PEQUENO
-========================================== */
-
-
-.menu-toggle {
-
-    display: none;
-
-}
-
-
-
-
-
-@media (max-width: 768px) {
-
-
-
-    /* HEADER */
-
-
-    .header-container {
-
-        display: flex;
-
-        align-items: center;
-
-        justify-content: space-between;
-
-        position: relative;
-
-    }
-
-
-
-
-
-    .logo {
-
-        display: flex;
-
-        align-items: center;
-
-        gap: 10px;
-
-    }
-
-
-
-
-    .logo img {
-
-        width: 130px;
-
-    }
-
-
-
-
-    .logo h1 {
-
-        font-size: 20px;
-
-    }
-
-
-
-
-
-
-    /* BOTÃO TRÊS BARRAS */
-
-
-    .menu-toggle {
-
-
-        display: flex;
-
-
-        flex-direction: column;
-
-
-        justify-content: center;
-
-
-        gap: 5px;
-
-
-        width: 40px;
-
-
-        height: 40px;
-
-
-        background: transparent;
-
-
-        border: none;
-
-
-        cursor: pointer;
-
-
-        z-index: 1001;
-
-
-    }
-
-
-
-
-    .menu-toggle span {
-
-
-        width: 28px;
-
-
-        height: 3px;
-
-
-        border-radius: 5px;
-
-
-    }
-
-
-
-
-
-
-    /* MENU MOBILE */
-
-
-    .navigation {
-
-
-        position: absolute;
-
-
-        top: 100%;
-
-
-        left: 0;
-
-
-        width: 100%;
-
-
-        display: none;
-
-
-        flex-direction: column;
-
-
-        align-items: center;
-
-
-        padding: 25px 0;
-
-
-        z-index: 1000;
-
-
-    }
-
-
-
-
-
-    .navigation.active {
-
-
-        display: flex;
-
-
-    }
-
-
-
-
-    .navigation a {
-
-
-        width: 100%;
-
-
-        text-align: center;
-
-
-        padding: 12px;
-
-
-    }
-
-    /* ==========================================
-   HERO RESPONSIVO
-========================================== */
-
-
-@media (max-width: 768px) {
-
 
 
     .hero {
 
-        flex-direction: column;
-
-        text-align: center;
-
-        padding: 40px 20px;
+        padding: 60px 20px;
 
     }
 
 
 
-    .hero h1 {
+    .hero-content {
 
-        font-size: 32px;
-
-    }
-
-
-
-    .hero p {
-
-        font-size: 16px;
+        text-align:center;
 
     }
 
 
 
-    .hero-image {
-
-        width: 100%;
-
-    }
-
-
-
-    .hero-image img {
-
-        width: 100%;
-
-    }
-
-
-
-    .hero-buttons {
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 15px;
-
-    }
-
-
-
-    .hero-buttons .btn {
-
-        width: 100%;
-
-    }
-
-
-}
-
-
-
-
-
-
-
-/* ==========================================
-   SEÇÕES
-========================================== */
-
-
-@media (max-width: 768px) {
-
-
-
-    .section {
-
-        padding: 40px 20px;
-
-    }
-
-
-
-    .section-title h2 {
-
-        font-size: 28px;
-
-    }
-
-
-
-    .section-title p {
-
-        font-size: 15px;
-
-    }
-
-
-}
-
-
-
-
-
-
-
-/* ==========================================
-   CARDS
-========================================== */
-
-
-@media (max-width: 1024px) {
-
-
-
-    .grid-4 {
+    .grid {
 
         grid-template-columns: repeat(2, 1fr);
 
@@ -407,96 +118,277 @@ img {
 
 
 
-@media (max-width: 768px) {
-
-
-
-    .grid-4,
-
-    .grid-3 {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-
-    .card {
-
-        width: 100%;
-
-    }
-
-
-}
-
-
-
-
-
 
 
 /* ==========================================
-   FORMULÁRIOS
+   CELULAR
 ========================================== */
 
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
 
 
 
-    input,
+    /* HEADER */
 
-    textarea,
 
-    select {
+    .header {
 
-        width: 100%;
+        height:auto;
+
+    }
+
+
+
+    .header-container {
+
+
+        padding:15px 20px;
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:space-between;
 
     }
 
 
 
-    .form-group {
+    .logo img {
 
-        width: 100%;
+
+        width:50px;
+
+    }
+
+
+
+    .logo h1 {
+
+
+        font-size:1.1rem;
 
     }
 
 
-}
 
 
 
+    /* BOTÃO MENU */
 
 
+    .menu-toggle {
 
 
-/* ==========================================
-   FOOTER
-========================================== */
+        display:flex;
 
+        flex-direction:column;
 
-@media (max-width: 768px) {
+        gap:5px;
 
+        width:42px;
 
+        height:42px;
 
-    footer {
+        justify-content:center;
 
-        text-align: center;
+        align-items:center;
+
+        border:none;
+
+        background:transparent;
 
     }
 
+
+
+    .menu-toggle span {
+
+
+        width:28px;
+
+        height:3px;
+
+        background:white;
+
+        border-radius:10px;
+
+    }
+
+
+
+
+
+    /* MENU */
+
+
+    .navigation {
+
+
+        display:none;
+
+
+        position:absolute;
+
+
+        top:80px;
+
+
+        left:0;
+
+
+        width:100%;
+
+
+        flex-direction:column;
+
+
+        align-items:center;
+
+
+        padding:20px;
+
+
+        background:#0D47A1;
+
+
+        gap:15px;
+
+
+    }
+
+
+
+
+    .navigation.active {
+
+
+        display:flex;
+
+
+    }
+
+
+
+    .header-actions {
+
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+
+
+
+
+    /* HERO */
+
+
+    .hero {
+
+
+        min-height:auto;
+
+        padding:120px 20px 50px;
+
+        flex-direction:column;
+
+        overflow:hidden;
+
+    }
+
+
+
+    .hero-content {
+
+
+        width:100%;
+
+    }
+
+
+
+    .hero-content h1 {
+
+
+        font-size:2.2rem;
+
+    }
+
+
+
+    .hero-buttons {
+
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+
+
+    .hero-buttons a {
+
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+
+
+
+
+
+    /* GRIDS */
+
+
+    .grid,
+
+    .grid-2,
+
+    .grid-3,
+
+    .grid-4 {
+
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+
+
+
+    /* SEÇÕES */
+
+
+    section {
+
+
+        padding:60px 20px;
+
+    }
+
+
+
+
+
+    /* FOOTER */
 
 
     .footer-content {
 
-        flex-direction: column;
 
-        gap: 20px;
+        text-align:center;
 
     }
-
 
 
 }
@@ -512,13 +404,25 @@ img {
 ========================================== */
 
 
-@media (max-width: 480px) {
+@media (max-width:480px){
 
 
 
-    .logo img {
+    .container {
 
-        width: 110px;
+
+        width:calc(100% - 30px);
+
+
+    }
+
+
+
+    .hero-content h1 {
+
+
+        font-size:1.8rem;
+
 
     }
 
@@ -526,62 +430,12 @@ img {
 
     .logo h1 {
 
-        font-size: 17px;
+
+        font-size:1rem;
+
 
     }
 
-
-
-    .hero h1 {
-
-        font-size: 26px;
-
-    }
-
-
-
-    .btn {
-
-        padding: 12px 18px;
-
-        font-size: 14px;
-
-    }
-
-
-
-    .card {
-
-        padding: 18px;
-
-    }
-
-
-
-}
-
-
-
-
-
-
-
-/* ==========================================
-   CELULAR DEITADO
-========================================== */
-
-
-@media (max-height: 500px) and (orientation: landscape) {
-
-
-
-    .navigation {
-
-        max-height: 80vh;
-
-        overflow-y: auto;
-
-    }
 
 
 }
