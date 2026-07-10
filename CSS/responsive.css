@@ -595,3 +595,69 @@ section {
 
 
 }
+
+/* ==========================================
+   MENU MOBILE - SCRIPT.JS
+========================================== */
+
+body.menu-open{
+
+    overflow:hidden;
+
+}
+
+
+.navigation.active{
+
+    display:flex !important;
+
+}
+
+
+.menu-toggle{
+
+    cursor:pointer;
+
+}
+
+
+.menu-toggle span{
+
+    display:block;
+
+    width:28px;
+
+    height:3px;
+
+    border-radius:10px;
+
+    background:#ffffff;
+
+    transition:all .3s ease;
+
+}
+
+
+/* ===============================
+   ANIMAÇÃO BOTÃO
+================================ */
+
+.menu-toggle.active span:nth-child(1){
+
+    transform:translateY(8px) rotate(45deg);
+
+}
+
+
+.menu-toggle.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+
+.menu-toggle.active span:nth-child(3){
+
+    transform:translateY(-8px) rotate(-45deg);
+
+}
