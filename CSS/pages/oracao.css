@@ -1,0 +1,284 @@
+/* =======================================================
+   ADSA IPÊ
+   PEDIDOS DE ORAÇÃO PAGE CSS
+======================================================= */
+
+
+
+/* =======================================================
+   HERO
+======================================================= */
+
+
+.prayer-hero {
+
+    min-height:100vh;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background-image:url("../assets/images/oracao-hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+
+.prayer-hero-overlay {
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.45)
+    );
+
+}
+
+
+
+.prayer-hero-content {
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    max-width:900px;
+
+    color:white;
+
+}
+
+
+
+.prayer-hero-content h1 {
+
+    font-size:4rem;
+
+    font-weight:900;
+
+    margin:25px 0;
+
+}
+
+
+
+.prayer-hero-content p {
+
+    font-size:1.2rem;
+
+    max-width:750px;
+
+    margin:auto;
+
+    color:#e5e7eb;
+
+}
+
+
+
+
+
+/* =======================================================
+   FORMULÁRIO
+======================================================= */
+
+
+.prayer-form-section {
+
+    padding:100px 0;
+
+}
+
+
+
+.prayer-form {
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding:40px;
+
+}
+
+
+
+.prayer-form button {
+
+    width:100%;
+
+}
+
+
+
+
+
+/* =======================================================
+   PROCESSO
+======================================================= */
+
+
+.prayer-process {
+
+    padding:100px 0;
+
+}
+
+
+
+.process-card {
+
+    text-align:center;
+
+}
+
+
+
+.process-icon {
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+/* =======================================================
+   TESTEMUNHOS
+======================================================= */
+
+
+.prayer-testimonials {
+
+    padding:100px 0;
+
+}
+
+
+
+.testimonial-card {
+
+    text-align:center;
+
+    padding:35px;
+
+}
+
+
+
+.testimonial-card p {
+
+    font-style:italic;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+/* =======================================================
+   ACOMPANHAMENTO
+======================================================= */
+
+
+.prayer-follow {
+
+    padding:80px 0;
+
+}
+
+
+
+.follow-box {
+
+    text-align:center;
+
+    padding:60px;
+
+}
+
+
+
+
+
+/* =======================================================
+   CTA
+======================================================= */
+
+
+.prayer-cta {
+
+    padding:100px 0;
+
+}
+
+
+
+.cta-box {
+
+    text-align:center;
+
+    padding:70px;
+
+}
+
+
+
+
+
+/* =======================================================
+   RESPONSIVO
+======================================================= */
+
+
+@media(max-width:768px){
+
+
+
+    .prayer-hero-content h1 {
+
+        font-size:2.3rem;
+
+    }
+
+
+
+    .prayer-form {
+
+        padding:25px;
+
+    }
+
+
+
+    .follow-box,
+    .cta-box {
+
+        padding:35px 20px;
+
+    }
+
+
+
+}
