@@ -1,21 +1,23 @@
+console.log("SCRIPT FUNCIONANDO");
+
+
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".navigation");
 
-console.log("Script carregado");
+
+console.log(menuToggle);
+console.log(navigation);
+
 
 
 if(menuToggle && navigation){
 
-    menuToggle.addEventListener("click", function(){
+    menuToggle.onclick = function(){
 
-        console.log("Botão clicado");
+        console.log("CLIQUE FUNCIONOU");
 
         navigation.classList.toggle("active");
 
-    });
-
-}else{
-
-    console.log("Elemento não encontrado");
+    };
 
 }
