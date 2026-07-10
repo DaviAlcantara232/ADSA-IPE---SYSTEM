@@ -1,0 +1,310 @@
+/* =======================================================
+   ADSA IPÊ
+   MINISTÉRIOS PAGE CSS
+======================================================= */
+
+
+
+/* =======================================================
+   HERO
+======================================================= */
+
+
+.ministries-hero {
+
+    min-height:100vh;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background-image:url("../assets/images/ministerios-hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+
+.ministries-hero-overlay {
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.45)
+    );
+
+}
+
+
+
+.ministries-hero-content {
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+
+.ministries-hero-content h1 {
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    font-weight:900;
+
+    margin:25px 0;
+
+}
+
+
+
+.ministries-hero-content p {
+
+    font-size:1.2rem;
+
+    color:#e5e7eb;
+
+    max-width:750px;
+
+    margin:auto;
+
+}
+
+
+
+
+
+/* =======================================================
+   INTRO
+======================================================= */
+
+
+.ministries-intro {
+
+    padding-bottom:40px;
+
+}
+
+
+
+
+
+/* =======================================================
+   CARDS
+======================================================= */
+
+
+.ministries-list,
+.ministries-more {
+
+    padding:60px 0;
+
+}
+
+
+
+.ministry-card {
+
+    text-align:center;
+
+}
+
+
+
+.ministry-icon {
+
+    font-size:50px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.ministry-card h3 {
+
+    font-size:1.5rem;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.ministry-card p {
+
+    color:var(--text-secondary);
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+/* =======================================================
+   LIDERANÇA
+======================================================= */
+
+
+.leader-mini {
+
+    overflow:hidden;
+
+    text-align:center;
+
+}
+
+
+
+.leader-mini img {
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+}
+
+
+
+.leader-mini h3 {
+
+    margin-top:20px;
+
+}
+
+
+
+.leader-mini p {
+
+    padding:0 20px 25px;
+
+    color:var(--text-secondary);
+
+}
+
+
+
+
+
+/* =======================================================
+   PARTICIPAÇÃO
+======================================================= */
+
+
+.join-box {
+
+    text-align:center;
+
+    padding:60px;
+
+}
+
+
+
+.join-box h2 {
+
+    font-size:2.5rem;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+/* =======================================================
+   AGENDA
+======================================================= */
+
+
+.ministries-schedule .card {
+
+    text-align:center;
+
+}
+
+
+
+
+
+/* =======================================================
+   CTA FINAL
+======================================================= */
+
+
+.cta-box {
+
+    text-align:center;
+
+    padding:70px;
+
+}
+
+
+
+.cta-box h2 {
+
+    font-size:2.8rem;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+/* =======================================================
+   RESPONSIVO
+======================================================= */
+
+
+@media(max-width:768px){
+
+
+
+    .ministries-hero-content h1 {
+
+        font-size:2.3rem;
+
+    }
+
+
+
+    .join-box,
+    .cta-box {
+
+        padding:35px 20px;
+
+    }
+
+
+
+}
