@@ -1,0 +1,415 @@
+/* =======================================================
+   ADSA IPÊ
+   EVENTOS PAGE CSS
+======================================================= */
+
+
+
+/* =======================================================
+   HERO
+======================================================= */
+
+
+.events-hero {
+
+    min-height:100vh;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background-image:url("../assets/images/eventos-hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+
+.events-hero-overlay {
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.45)
+    );
+
+}
+
+
+
+.events-hero-content {
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+
+.events-hero-content h1 {
+
+    font-size:4rem;
+
+    font-weight:900;
+
+    line-height:1.1;
+
+    margin:25px 0;
+
+}
+
+
+
+.events-hero-content p {
+
+    max-width:750px;
+
+    margin:auto;
+
+    font-size:1.2rem;
+
+    color:#e5e7eb;
+
+}
+
+
+
+
+
+/* =======================================================
+   EVENTO DESTAQUE
+======================================================= */
+
+
+.featured-event {
+
+    padding:100px 0;
+
+}
+
+
+
+.featured-box {
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+
+
+.featured-content h2 {
+
+    font-size:2.5rem;
+
+    margin:20px 0;
+
+}
+
+
+
+.featured-content p {
+
+    color:var(--text-secondary);
+
+    line-height:1.7;
+
+}
+
+
+
+.event-details {
+
+    margin:25px 0;
+
+}
+
+
+
+.event-details p {
+
+    margin-bottom:10px;
+
+}
+
+
+
+.featured-image img {
+
+    width:100%;
+
+    height:400px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+/* =======================================================
+   CARDS DE EVENTOS
+======================================================= */
+
+
+.events-list {
+
+    padding:80px 0;
+
+}
+
+
+
+.event-card {
+
+    text-align:center;
+
+}
+
+
+
+.event-date {
+
+    width:80px;
+
+    height:80px;
+
+    margin:0 auto 25px;
+
+    border-radius:20px;
+
+    background:var(--primary);
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+.event-date span {
+
+    font-size:2rem;
+
+    font-weight:900;
+
+}
+
+
+
+.event-date small {
+
+    font-size:.9rem;
+
+}
+
+
+
+.event-card h3 {
+
+    margin-bottom:15px;
+
+}
+
+
+
+.event-card p {
+
+    color:var(--text-secondary);
+
+    line-height:1.6;
+
+}
+
+
+
+.event-info {
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    margin:20px 0;
+
+}
+
+
+
+
+
+/* =======================================================
+   CALENDÁRIO
+======================================================= */
+
+
+.calendar-section {
+
+    padding:80px 0;
+
+}
+
+
+
+.calendar-box {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.calendar-item {
+
+    padding:25px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    background:var(--surface-hover);
+
+}
+
+
+
+.calendar-item strong {
+
+    display:block;
+
+    font-size:1.3rem;
+
+    margin-bottom:10px;
+
+}
+
+
+
+
+
+/* =======================================================
+   CTA
+======================================================= */
+
+
+.events-cta {
+
+    padding:100px 0;
+
+}
+
+
+
+.cta-box {
+
+    text-align:center;
+
+    padding:70px;
+
+}
+
+
+
+.cta-box h2 {
+
+    font-size:2.8rem;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+/* =======================================================
+   RESPONSIVO
+======================================================= */
+
+
+@media(max-width:768px){
+
+
+    .events-hero-content h1 {
+
+        font-size:2.3rem;
+
+    }
+
+
+
+    .featured-box {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .featured-image img {
+
+        height:280px;
+
+    }
+
+
+
+    .calendar-box {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .cta-box {
+
+        padding:35px 20px;
+
+    }
+
+
+
+}
