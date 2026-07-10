@@ -1,95 +1,21 @@
-/* ==========================================
-   ADSA IPÊ
-   SCRIPT PRINCIPAL
-========================================== */
-
-
-/* ==========================================
-   MENU MOBILE
-========================================== */
-
-
 const menuToggle = document.querySelector(".menu-toggle");
-
 const navigation = document.querySelector(".navigation");
 
+console.log("Script carregado");
 
 
 if(menuToggle && navigation){
 
+    menuToggle.addEventListener("click", function(){
 
-    menuToggle.addEventListener("click", () => {
-
+        console.log("Botão clicado");
 
         navigation.classList.toggle("active");
 
-
-        menuToggle.classList.toggle("open");
-
-
     });
 
+}else{
 
-
-    const menuLinks = navigation.querySelectorAll("a");
-
-
-
-    menuLinks.forEach(link => {
-
-
-        link.addEventListener("click", () => {
-
-
-            navigation.classList.remove("active");
-
-
-            menuToggle.classList.remove("open");
-
-
-        });
-
-
-    });
-
+    console.log("Elemento não encontrado");
 
 }
-
-
-
-
-
-
-/* ==========================================
-   FECHAR MENU AO CLICAR FORA
-========================================== */
-
-
-document.addEventListener("click", (event) => {
-
-
-    if(!event.target.closest(".header")){
-
-
-        if(navigation){
-
-
-            navigation.classList.remove("active");
-
-
-        }
-
-
-        if(menuToggle){
-
-
-            menuToggle.classList.remove("open");
-
-
-        }
-
-
-    }
-
-
-});
